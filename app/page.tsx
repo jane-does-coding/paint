@@ -8,6 +8,37 @@ export default function Home() {
 				className="h-screen w-full fixed top-0 left-0"
 				alt=""
 			/>
+
+			{/* the overlap */}
+			<div className="w-full h-screen z-19 backdrop-blur-[2px] bg-neutral-900/20 fixed"></div>
+			<img
+				src="/imgs/clip.png"
+				className="w-[15vw] h-[15vh] drop-shadow-sm drop-shadow-black/90 fixed top-[6vh] left-[50%] translate-x-[-50%] z-20"
+				alt=""
+			/>
+			<div className="bg-[#f0e6da] h-[70vh] w-[60vw] fixed top-[18vh] left-[20vw] z-19 inset-shadow-sm rounded-[1vh] inset-shadow-neutral-800/30 shadow-lg shadow-black/50 overflow-hidden p-[3vh] pt-[5vh]">
+				<div className="flex w-full h-full z-10 relative">
+					<div className="w-4/10">
+						<img
+							src="https://i.pinimg.com/736x/41/ab/32/41ab32b23c4c2104ff2c75e5c21a285f.jpg"
+							alt=""
+							className="w-full object-cover rounded-[0.5vh] z-10"
+						/>
+						<h2>Lorem ipsum dolor sit amet.</h2>
+						<p>Lorem, ipsum dolor.</p>
+					</div>
+					<div className="w-6/10 ">
+						<h2>Lorem ipsum dolor sit amet.</h2>
+						<p>Lorem, ipsum dolor.</p>
+					</div>
+				</div>
+				<img
+					src="/imgs/bg-texture.jpg"
+					className="h-screen w-full top-0 left-0 opacity-30 absolute z-5"
+					alt=""
+				/>
+			</div>
+
 			{/* <div className="fixed top-0 w-[28vw] h-[10vh] text-center items-center justify-center flex left-0">
 				<h2 className="text-[7vh] leading-[7vh] mellow text-blue-800/80">
 					Paint Ideas
