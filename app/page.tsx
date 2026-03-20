@@ -8,37 +8,68 @@ export default function Home() {
 				className="h-screen w-full fixed top-0 left-0"
 				alt=""
 			/>
+			{/* <div className="fixed top-0 w-[28vw] h-[10vh] text-center items-center justify-center flex left-0">
+				<h2 className="text-[7vh] leading-[7vh] mellow text-blue-800/80">
+					Paint Ideas
+				</h2>
+			</div> */}
 			<img
 				src="/imgs/paint-pallete.jpg"
-				className="h-screen relative z-10"
+				className="h-[100vh] w-[30vw] fixed top-[0vh] left-0 z-10"
 				alt=""
 			/>
-			<div className="bg-blue-300/0 left-[32.5vw] top-[5vh] gap-y-[4vh] gap-x-[2vw] px-[3vw] w-[67.5vw] fixed right-0 grid grid-cols-2 overflow-y-auto h-[95vh] pb-[5vh] items-center just">
-				<div className="relative h-fit">
-					<h2 className="absolute bottom-[1vh] text-[2vh] z-5 left-[50%] translate-x-[-50%] text-black italic">
-						Your Next Masterpiece
-					</h2>
-					<h2 className="absolute top-[6vh] text-[8vh] z-5 left-[50%] translate-x-[-50%] text-black italic">
-						+
-					</h2>
-					<h2 className="absolute top-[17vh] text-[2vh] z-5 left-[50%] translate-x-[-50%] text-black italic">
-						Create new project
-					</h2>
-					<img
-						src="/imgs/canvas2-nobg.png"
-						className="w-full h-[30vh] drop-shadow-xl drop-shadow-black/90 relative z-2"
-						alt=""
-					/>
-					<img
-						src="/imgs/canvas2-nobg.png"
-						className="w-full h-[5vh] drop-shadow-xl drop-shadow-black/90 relative z-2 mt-[1vh]"
-						alt=""
-					/>
+			<div className="fixed top-[0vh] w-[30vw] h-[100vh] z-10 text-center items-center justify-center grid grid-cols-4 left-0 gap-[0.5vh] p-[1vh]">
+				{[
+					1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+					21, 22, 23, 24,
+				].map((item, i) => (
+					<div
+						className="bg-blue-400/0 w-full h-full rounded-[1.5vh] cursor-pointer"
+						key={i}
+					></div>
+				))}
+			</div>
+			<div className="flex fixed left-[47.5vw] z-10 top-[3vh] gap-[2vw] h-[17.5vh]">
+				<img src="/imgs/paint.png" className="h-full w-auto " alt="idk" />
+				<img src="/imgs/brush.jpg" className="h-full w-auto" alt="idk" />
+			</div>
+			<div className="bg-blue-300/0 left-[32.5vw] top-[22.5vh] gap-y-[9vh] gap-x-[2vw] px-[3vw] w-[67.5vw] fixed right-0 grid grid-cols-2 overflow-y-auto h-[77.5vh] pb-[5vh] items-center pt-[8vh] z-11">
+				<div className="relative h-fit overflow-visible group cursor-pointer">
+					<div className="group-hover:rotate-4 group-hover:scale-105 transition-all ease-in-out z-30">
+						<div className="absolute top-[7.5vh] left-[50%] translate-x-[-50%] mx-auto z-50 flex flex-col items-center justify-center transition-all ease-in-out">
+							<h2 className="text-[10vh] h-fit leading-[10vh] z-5  text-black trnasition-all ease-in-out finger-paint relative">
+								+
+							</h2>
+							<h2 className="text-[3.25vh] w-full text-center z-5 text-black trnasition-all ease-in-out mellow">
+								Create new project
+							</h2>
+						</div>
+						<img
+							src="/imgs/canvas2-nobg.png"
+							className="w-full h-[30vh] drop-shadow-xl drop-shadow-black/90 relative z-2 "
+							alt=""
+						/>
+						<img
+							src="/imgs/clip.png"
+							className="w-[10vw] h-[10vh] drop-shadow-sm drop-shadow-black/90 absolute top-[-7vh] left-[50%] translate-x-[-50%] z-2"
+							alt=""
+						/>
+					</div>
+					<div className=" group-hover:-rotate-2 group-hover:scale-105 transition-all ease-in-out z-5">
+						<h2 className="absolute bottom-[1.75vh] text-[2.5vh] w-full text-center z-5 left-[50%] translate-x-[-50%] text-black italic finger-paint">
+							Your Next Masterpiece
+						</h2>
+						<img
+							src="/imgs/canvas2-nobg.png"
+							className="w-full h-[7vh] drop-shadow-xl drop-shadow-black/90 relative z-2 mt-[1vh]"
+							alt=""
+						/>
+					</div>
 				</div>
 				{[1, 2, 3, 4, 5, 6].map((project, i) => (
 					<div className="relative h-fit" key={i}>
-						<h2 className="absolute bottom-[1vh] text-[2vh] z-5 left-[50%] translate-x-[-50%] text-black italic">
-							Lorem Ipsum
+						<h2 className="absolute bottom-[2vh] text-[2vh] w-full text-center z-5 left-[50%] translate-x-[-50%] text-black italic font-extrabold finger-paint">
+							Lorem Ipsum Dolor Amet Lorem Ipsum
 						</h2>
 						<img
 							src="/imgs/canvas2-nobg.png"
@@ -47,7 +78,12 @@ export default function Home() {
 						/>
 						<img
 							src="/imgs/canvas2-nobg.png"
-							className="w-full h-[5vh] drop-shadow-xl drop-shadow-black/90 relative z-2 mt-[1vh]"
+							className="w-full h-[7vh] drop-shadow-xl drop-shadow-black/90 relative z-2 mt-[1vh]"
+							alt=""
+						/>
+						<img
+							src="/imgs/clip.png"
+							className="w-[10vw] h-[10vh] drop-shadow-sm drop-shadow-black/90 absolute top-[-7vh] left-[50%] translate-x-[-50%] z-2"
 							alt=""
 						/>
 					</div>

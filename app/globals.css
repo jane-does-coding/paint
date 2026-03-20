@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@font-face {
+	font-family: "finger-paint-font";
+	src: url("/fonts/finger-paint-font/finger-paint-font.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.finger-paint {
+	font-family: "finger-paint-font", sans-serif;
+}
+
+@font-face {
+	font-family: "mellow-burgundy";
+	src: url("/fonts/mellow-burgundy-font/mellow-burgundy-font.ttf")
+		format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.mellow {
+	font-family: "mellow-burgundy", sans-serif;
+}
