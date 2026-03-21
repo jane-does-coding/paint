@@ -1,0 +1,86 @@
+[
+	{
+		"id": 1,
+		"title": "What the Duck?!",
+		"description": "A chaotic duck-themed game built during a hackathon.",
+		"image": "https://cdn.dribbble.com/userupload/45792854/file/23386ec9fa2b71c8808a6a4c2f7c3975.png?resize=2048x1192&vertical=center",
+		"demo": "https://example.com",
+		"github": "https://github.com/example",
+		"readme": "",
+		"tags": ["Game", "Hackathon"],
+		"timeLogged": "4h 27m",
+		"timeApproved": "4h 27m"
+	},
+	{
+		"id": 2,
+		"title": "Another Project",
+		"description": "Something cool you built.",
+		"image": "https://private-user-images.githubusercontent.com/112284703/554333176-95722416-415a-4756-bdc8-6551e1531f7c.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzQxMjE0MDEsIm5iZiI6MTc3NDEyMTEwMSwicGF0aCI6Ii8xMTIyODQ3MDMvNTU0MzMzMTc2LTk1NzIyNDE2LTQxNWEtNDc1Ni1iZGM4LTY1NTFlMTUzMWY3Yy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMyMVQxOTI1MDFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01M2FjMzdjYTdiZDAwN2JiNWZmYTk3NzU3ZWNiN2Q5YWI2YTMwYmFhMjlhYTY4ODFjMWQxMjQ2ZjJjMGE5NTNmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.0JoILFyTM9Z2CKkjkrTDGyL7I1qr8kNfu-GFBBAuSk8",
+		"demo": "",
+		"github": "",
+		"readme": "",
+		"tags": ["Web"],
+		"timeLogged": "2h",
+		"timeApproved": "1h 30m"
+	},
+	{
+		"id": 3,
+		"title": "Another Project",
+		"description": "Something cool you built.",
+		"image": "https://private-user-images.githubusercontent.com/112284703/567315228-3757b0c0-76a9-49b0-aad6-693259e13ec5.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzQxMjE3MDAsIm5iZiI6MTc3NDEyMTQwMCwicGF0aCI6Ii8xMTIyODQ3MDMvNTY3MzE1MjI4LTM3NTdiMGMwLTc2YTktNDliMC1hYWQ2LTY5MzI1OWUxM2VjNS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMyMVQxOTMwMDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iYmZiZDAyNWJmNzcyMzE2OGM4MDI3NzMzZjlmM2IyYTc1YjY1MGRkZDZmZjFlODFkZTg0MGM2NDNlODYyYzU2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.6zapaNA5PwDH53NtblmMmLyrADrVjbTeRnyrjnJV3PY",
+		"demo": "",
+		"github": "",
+		"readme": "",
+		"tags": ["Web"],
+		"timeLogged": "2h",
+		"timeApproved": "1h 30m"
+	},
+	{
+		"id": 4,
+		"title": "Another Project",
+		"description": "Something cool you built.",
+		"image": "https://private-user-images.githubusercontent.com/112284703/567315460-d1dd3ed1-9301-4c6a-b2bb-723a1e0d5c9e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzQxMjE4OTEsIm5iZiI6MTc3NDEyMTU5MSwicGF0aCI6Ii8xMTIyODQ3MDMvNTY3MzE1NDYwLWQxZGQzZWQxLTkzMDEtNGM2YS1iMmJiLTcyM2ExZTBkNWM5ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMyMVQxOTMzMTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hZTJhMTIxOWZhMGUzODBhZTZiMWE0MWVlOGU5ODQzNjE5YTFlNTllMTkyYWU2Y2NmYjI3M2YzYmZiOGEwYjQ4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.soeGHvki7ReM014anlkxtb0hUMF5VEag7WeBwRo9Fuc",
+		"demo": "",
+		"github": "",
+		"readme": "",
+		"tags": ["Web"],
+		"timeLogged": "2h",
+		"timeApproved": "1h 30m"
+	},
+	{
+		"id": 5,
+		"title": "Some Other Project with a very very long title for some reason",
+		"description": "Something cool you built.",
+		"image": "https://private-user-images.githubusercontent.com/112284703/567315687-16e96765-d80a-4687-acd2-70b981d3295e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzQxMjIwNzgsIm5iZiI6MTc3NDEyMTc3OCwicGF0aCI6Ii8xMTIyODQ3MDMvNTY3MzE1Njg3LTE2ZTk2NzY1LWQ4MGEtNDY4Ny1hY2QyLTcwYjk4MWQzMjk1ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMyMVQxOTM2MThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04ODhmYTZjZWQ1ODRmODFmZjE0ZDI1MjBkZDdjOWQ4YTliMTg5NTZiNzNhZDUxYWQwZjNhMDY2N2UzZDUwNGFjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.R9QTRhPN4drdWPbQGWOVZgH_9z9Tmo9Ms0JMOVT9sdg",
+		"demo": "",
+		"github": "",
+		"readme": "",
+		"tags": ["Web"],
+		"timeLogged": "2h",
+		"timeApproved": "1h 30m"
+	},
+	{
+		"id": 6,
+		"title": "Some Other Project with a very very long title for some reason",
+		"description": "Something cool you built.",
+		"image": "https://cdn.dribbble.com/userupload/44257842/file/72eb3835dea21a95fdb1593ddffb496d.png?resize=2048x1126&vertical=center",
+		"demo": "",
+		"github": "",
+		"readme": "",
+		"tags": ["Web"],
+		"timeLogged": "2h",
+		"timeApproved": "1h 30m"
+	},
+	{
+		"id": 7,
+		"title": "Some Other Project with a very very long title for some reason",
+		"description": "Something cool you built.",
+		"image": "https://cdn.dribbble.com/userupload/45436293/file/3ce0879fd7aac5a938c76c60baf6df43.png?resize=2048x1174&vertical=center",
+		"demo": "",
+		"github": "",
+		"readme": "",
+		"tags": ["Web"],
+		"timeLogged": "2h",
+		"timeApproved": "1h 30m"
+	}
+]

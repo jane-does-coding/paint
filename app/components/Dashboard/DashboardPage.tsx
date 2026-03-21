@@ -1,7 +1,12 @@
-import Image from "next/image";
+"use client";
 import Projectpopup from "./Projectpopup";
 import { PiSmileyWinkDuotone } from "react-icons/pi";
+import projects from "@/app/data/projects.json";
+import { useState } from "react";
+
 const DashboardPage = () => {
+	const [selectedProject, setSelectedProject]: any = useState();
+
 	return (
 		<div className="bg-green-200 w-full h-screen">
 			<img
@@ -56,7 +61,7 @@ const DashboardPage = () => {
 					Jane Doe
 				</div>
 			</div>
-			<div className="bg-blue-300/0 border-t-2 border-black border-dotted left-[27.5vw] top-[15.5vh] gap-y-[8vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 grid grid-cols-3 overflow-y-auto h-[85vh] pb-[5vh] items-center pt-[7.5vh] z-11">
+			<div className="bg-blue-300/0 border-t-2 border-black border-dotted left-[27.5vw] top-[15.5vh] gap-y-[8vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 grid grid-cols-3 overflow-y-auto h-[85vh] pb-[6vh] items-start pt-[8vh] z-11">
 				{/* Create new project canvas */}
 				<div className="relative h-fit overflow-visible group cursor-pointer">
 					<div className="duration-200 group-hover:rotate-4 relative group-hover:scale-105 transition-all ease-in-out z-30">
@@ -90,36 +95,49 @@ const DashboardPage = () => {
 						/>
 					</div>
 				</div>
-				{[1, 2, 3, 4, 5, 6].map((project, i) => (
-					<div className="relative h-fit" key={i}>
-						<h2 className="absolute bottom-[2vh] text-[2vh] w-full text-center z-5 left-[50%] translate-x-[-50%] text-black italic font-extrabold finger-paint">
-							Lorem Ipsum Dolor Amet Lorem Ipsum Some More
-						</h2>
-						<div className="relative">
+				{projects.map((project, i) => (
+					<div
+						className="relative h-fit overflow-visible group cursor-pointer"
+						onClick={() => setSelectedProject(project)}
+						key={i}
+					>
+						<div className="duration-200 group-hover:rotate-4 relative group-hover:scale-105 transition-all ease-in-out z-30">
 							<img
 								src="/imgs/canvas2-nobg.png"
-								className="w-full h-[22.5vh] drop-shadow-lg drop-shadow-black/90 relative z-2"
+								className="w-full h-[22.5vh] drop-shadow-lg group-hover:drop-shadow-black/70 transition-all group-hover:drop-shadow-xl drop-shadow-black/90 relative z-2"
 								alt=""
 							/>
 							<img
-								src="https://i.pinimg.com/736x/41/ab/32/41ab32b23c4c2104ff2c75e5c21a285f.jpg"
+								src={project.image}
 								alt=""
 								className="absolute w-[90%] h-[87.5%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] object-cover rounded-[0.5vh] z-10"
 							/>
+							<img
+								src="/imgs/clip.png"
+								className="w-[8vw] h-[8vh] drop-shadow-sm drop-shadow-black/90 absolute top-[-5.5vh] left-[50%] translate-x-[-50%] z-10"
+								alt=""
+							/>
 						</div>
-						<img
-							src="/imgs/canvas2-nobg.png"
-							className="w-full h-[10vh] drop-shadow-lg drop-shadow-black/90 relative z-2 mt-[1vh]"
-							alt=""
-						/>
-						<img
-							src="/imgs/clip.png"
-							className="w-[8vw] h-[8vh] drop-shadow-sm drop-shadow-black/90 absolute top-[-5.5vh] left-[50%] translate-x-[-50%] z-10"
-							alt=""
-						/>
+						<div className=" group-hover:-rotate-2 duration-200 group-hover:scale-[103%] transition-all ease-in-out z-5 flex flex-col items-center justify-center relative">
+							<h2 className="absolute top-[50%] px-[0.75vw] translate-y-[-50%] text-[2vh] w-full text-center z-20 left-[50%] translate-x-[-50%] text-black italic font-extrabold finger-paint">
+								{project.title}
+							</h2>
+							<img
+								src="/imgs/canvas2-nobg.png"
+								className="w-full h-[10vh] drop-shadow-lg group-hover:drop-shadow-black/70 transition-all group-hover:drop-shadow-xl drop-shadow-black/90 relative z-2 mt-[1vh]"
+								alt=""
+							/>
+						</div>
 					</div>
 				))}
 			</div>
+
+			{selectedProject && (
+				<Projectpopup
+					project={selectedProject}
+					onClose={() => setSelectedProject(null)}
+				/>
+			)}
 		</div>
 	);
 };
