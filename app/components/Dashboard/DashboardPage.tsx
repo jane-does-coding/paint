@@ -59,7 +59,7 @@ const DashboardPage = () => {
 			<div className="bg-blue-300/0 border-t-2 border-black border-dotted left-[27.5vw] top-[15.5vh] gap-y-[8vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 grid grid-cols-3 overflow-y-auto h-[85vh] pb-[5vh] items-center pt-[7.5vh] z-11">
 				{/* Create new project canvas */}
 				<div className="relative h-fit overflow-visible group cursor-pointer">
-					<div className="duration-200 group-hover:rotate-4  group-hover:scale-105 transition-all ease-in-out z-30">
+					<div className="duration-200 group-hover:rotate-4 relative group-hover:scale-105 transition-all ease-in-out z-30">
 						<div className="absolute w-full top-[5vh] left-[50%] translate-x-[-50%] mx-auto z-50 flex flex-col items-center justify-center transition-all ease-in-out">
 							<h2 className="text-[8vh] h-fit leading-[8vh] z-5  text-black trnasition-all ease-in-out finger-paint relative">
 								+
