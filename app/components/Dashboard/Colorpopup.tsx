@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { IoCheckmark } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 
-const Projectpopup = ({ project, onClose }: any) => {
+const Colorpopup = ({ idea, onClose }: any) => {
 	const [isVisible, setIsVisible] = useState(false);
 
 	useEffect(() => {
@@ -27,7 +27,7 @@ const Projectpopup = ({ project, onClose }: any) => {
 
 			<img
 				src="/imgs/clip.png"
-				className={`fixed w-[16vw] h-[16vh] top-[5vh] left-[50%] translate-x-[-50%] z-20
+				className={`fixed w-[12vw] h-[12vh] top-[12vh] left-[50%] translate-x-[-50%] z-20
 				drop-shadow-sm drop-shadow-black/90
 				transition-all duration-200
 				${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-[2vh]"}`}
@@ -35,7 +35,7 @@ const Projectpopup = ({ project, onClose }: any) => {
 			/>
 
 			<div
-				className={`bg-[#f0e6da] h-[70vh] w-[60vw] fixed top-[18vh] left-[20vw]
+				className={`bg-[#f0e6da] h-[50vh] w-[50vw] fixed top-[22vh] left-[25vw]
 				rounded-[1vh] shadow-lg shadow-black/50 overflow-hidden p-[3vh] pt-[6vh]
 				transition-all duration-200 z-19
 				${
@@ -54,33 +54,33 @@ const Projectpopup = ({ project, onClose }: any) => {
 				<div className="flex w-full h-full relative z-10">
 					<div className="w-9/20">
 						<img
-							src={project.image}
+							src={idea.image}
 							alt=""
 							className="w-full h-[27.5vh] object-cover rounded-[0.5vh] border-2 border-black"
 						/>
 
-						<div className="flex gap-[0.75vw] mt-[2vh]">
+						{/* <div className="flex gap-[0.75vw] mt-[2vh]">
 							<a
-								href={project.demo}
+								href={idea.demo}
 								className="bg-black text-white finger-paint rounded-[1vh] py-[0.75vh] text-[2vh] w-full flex items-center justify-center"
 							>
 								Demo
 							</a>
 							<a
-								href={project.github}
+								href={idea.github}
 								className="bg-black text-white finger-paint rounded-[1vh] py-[0.75vh] text-[2vh] w-full flex items-center justify-center"
 							>
 								Github
 							</a>
-						</div>
+						</div> */}
 
-						<div className="flex flex-col gap-[1vh] mt-[2vh]">
+						{/* <div className="flex flex-col gap-[1vh] mt-[2vh]">
 							{[
-								{ label: "Experienceable Demo Link", value: project.demo },
-								{ label: "Public GitHub URL", value: project.github },
-								{ label: "README URL", value: project.readme },
-								{ label: "Project Description", value: project.description },
-								{ label: "Project screenshot", value: project.image },
+								{ label: "Experienceable Demo Link", value: idea.demo },
+								{ label: "Public GitHub URL", value: idea.github },
+								{ label: "README URL", value: idea.readme },
+								{ label: "Project Description", value: idea.description },
+								{ label: "Project screenshot", value: idea.image },
 							].map((item, i) => (
 								<p
 									key={i}
@@ -96,14 +96,14 @@ const Projectpopup = ({ project, onClose }: any) => {
 									{item.label}
 								</p>
 							))}
-						</div>
+						</div> */}
 					</div>
 
 					<div className="w-11/20 pl-[2vw] h-full overflow-y-auto pt-[1vh]">
-						<h2 className="mellow text-[6vh] leading-[7vh]">{project.title}</h2>
+						<h2 className="mellow text-[6vh] leading-[7vh]">{idea.title}</h2>
 
 						<div className="flex flex-wrap gap-[0.5vw] my-[1vh]">
-							{project.tags?.map((tag: string) => (
+							{idea.tags?.map((tag: string) => (
 								<span
 									key={tag}
 									className="bg-neutral-600/20 finger-paint px-[0.5vw] py-[0.25vh] rounded-[0.25vh] text-[1.75vh]"
@@ -114,37 +114,28 @@ const Projectpopup = ({ project, onClose }: any) => {
 						</div>
 
 						<p className="text-[2.25vh] finger-paint mt-[2vh]">
-							{project.description}
+							{idea.description}
 						</p>
 
 						<div className="flex w-full gap-[0.75vw] mt-[2vh]">
-							<div className="border-2 border-black w-1/2 rounded-[1vh] flex flex-col items-center justify-center py-[2vh] bg-amber-50/50 backdrop-blur-xs">
+							<div className="border-2 border-black w-full rounded-[1vh] flex gap-[2vh] items-center justify-center py-[2vh] bg-amber-50/50 backdrop-blur-xs">
 								<p className="finger-paint text-[3vh] font-extrabold">
-									{project.timeLogged}
+									{idea.timeEstimate}
 								</p>
 								<p className="finger-paint text-[1.75vh] mt-[1vh]">
-									Time Logged
-								</p>
-							</div>
-
-							<div className="border-2 border-black w-1/2 rounded-[1vh] flex flex-col items-center justify-center py-[2vh] bg-amber-50/50 backdrop-blur-xs">
-								<p className="finger-paint text-[3vh] font-extrabold">
-									{project.timeApproved}
-								</p>
-								<p className="finger-paint text-[1.75vh] mt-[1vh]">
-									Time Approved
+									Estimated Time
 								</p>
 							</div>
 						</div>
 
-						<div className="flex gap-[0.75vw] mt-[2vh]">
+						{/* <div className="flex gap-[0.75vw] mt-[2vh]">
 							<a className="bg-black text-white finger-paint rounded-[1vh] py-[0.75vh] text-[2vh] w-full flex items-center justify-center">
 								Edit
 							</a>
 							<a className="bg-black text-white finger-paint rounded-[1vh] py-[0.75vh] text-[2vh] w-full flex items-center justify-center">
 								Delete
 							</a>
-						</div>
+						</div> */}
 					</div>
 				</div>
 
@@ -158,4 +149,4 @@ const Projectpopup = ({ project, onClose }: any) => {
 	);
 };
 
-export default Projectpopup;
+export default Colorpopup;

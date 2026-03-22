@@ -1,0 +1,194 @@
+[
+	{
+		"id": 1,
+		"title": "Pixel Garden",
+		"description": "A calming web app where users grow pixel plants over time based on their daily habits.",
+		"image": "https://images.unsplash.com/photo-1526318472351-c75fcf070305",
+		"timeEstimate": "6h",
+		"tags": ["productivity", "gamification", "pixel-art", "wellness"]
+	},
+	{
+		"id": 2,
+		"title": "What the Duck?!",
+		"description": "A chaotic physics-based duck game where everything goes wrong in hilarious ways.",
+		"image": "https://images.unsplash.com/photo-1501706362039-c6e08f6c1f4f",
+		"timeEstimate": "8h",
+		"tags": ["game", "physics", "fun", "chaotic"]
+	},
+	{
+		"id": 3,
+		"title": "StudySprint",
+		"description": "A gamified Pomodoro timer where you level up by staying focused.",
+		"image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+		"timeEstimate": "5h",
+		"tags": ["productivity", "pomodoro", "gamification", "focus"]
+	},
+	{
+		"id": 4,
+		"title": "Moodboard AI",
+		"description": "Generate aesthetic moodboards based on a single word or vibe.",
+		"image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
+		"timeEstimate": "7h",
+		"tags": ["ai", "design", "creative", "visual"]
+	},
+	{
+		"id": 5,
+		"title": "Hackathon Tracker",
+		"description": "Track your hackathons, wins, and projects in a clean dashboard.",
+		"image": "https://images.unsplash.com/photo-1559027615-cd4628902d4a",
+		"timeEstimate": "6h",
+		"tags": ["dashboard", "productivity", "tracking", "developer"]
+	},
+	{
+		"id": 6,
+		"title": "LoFi Room",
+		"description": "Interactive lo-fi study room with customizable music and ambiance.",
+		"image": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353",
+		"timeEstimate": "9h",
+		"tags": ["music", "ambient", "ui", "relaxation"]
+	},
+	{
+		"id": 7,
+		"title": "DevQuest",
+		"description": "Turn coding tasks into quests with XP, levels, and achievements.",
+		"image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f",
+		"timeEstimate": "8h",
+		"tags": ["gamification", "developer", "productivity", "learning"]
+	},
+	{
+		"id": 8,
+		"title": "Canvas Notes",
+		"description": "A visual note-taking app using draggable canvases instead of text blocks.",
+		"image": "https://images.unsplash.com/photo-1517842645767-c639042777db",
+		"timeEstimate": "7h",
+		"tags": ["notes", "drag-drop", "ui", "productivity"]
+	},
+	{
+		"id": 9,
+		"title": "Daily Doodle",
+		"description": "A simple drawing app with daily prompts and a gallery.",
+		"image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f",
+		"timeEstimate": "5h",
+		"tags": ["drawing", "creative", "canvas", "fun"]
+	},
+	{
+		"id": 10,
+		"title": "Time Capsule",
+		"description": "Send messages to your future self with scheduled unlock dates.",
+		"image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+		"timeEstimate": "6h",
+		"tags": ["messaging", "future", "emotional", "storage"]
+	},
+	{
+		"id": 11,
+		"title": "Mini Portfolio Builder",
+		"description": "Generate a simple portfolio site from a form in seconds.",
+		"image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+		"timeEstimate": "6h",
+		"tags": ["portfolio", "builder", "web", "developer"]
+	},
+	{
+		"id": 12,
+		"title": "Color Clash",
+		"description": "A fast-paced reaction game matching colors under pressure.",
+		"image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+		"timeEstimate": "4h",
+		"tags": ["game", "reaction", "speed", "colors"]
+	},
+	{
+		"id": 13,
+		"title": "AI Resume Critic",
+		"description": "Upload your resume and get instant feedback and suggestions.",
+		"image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4",
+		"timeEstimate": "7h",
+		"tags": ["ai", "resume", "career", "analysis"]
+	},
+	{
+		"id": 14,
+		"title": "Recipe Roulette",
+		"description": "Randomly generate meals based on ingredients you already have.",
+		"image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061",
+		"timeEstimate": "5h",
+		"tags": ["food", "generator", "random", "fun"]
+	},
+	{
+		"id": 15,
+		"title": "Music Visualizer",
+		"description": "Turn any song into a live animated visual experience.",
+		"image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4",
+		"timeEstimate": "8h",
+		"tags": ["music", "animation", "visual", "audio"]
+	},
+	{
+		"id": 16,
+		"title": "Habit Heatmap",
+		"description": "Track habits with a GitHub-style contribution grid.",
+		"image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+		"timeEstimate": "6h",
+		"tags": ["habits", "tracking", "productivity", "data"]
+	},
+	{
+		"id": 17,
+		"title": "Virtual Pet",
+		"description": "Take care of a digital pet that evolves based on your activity.",
+		"image": "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8",
+		"timeEstimate": "9h",
+		"tags": ["game", "pet", "simulation", "fun"]
+	},
+	{
+		"id": 18,
+		"title": "Focus Battle",
+		"description": "Compete with friends to stay focused the longest.",
+		"image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
+		"timeEstimate": "7h",
+		"tags": ["multiplayer", "focus", "productivity", "competition"]
+	},
+	{
+		"id": 19,
+		"title": "Typing Racer",
+		"description": "Race others in real-time typing challenges.",
+		"image": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d",
+		"timeEstimate": "8h",
+		"tags": ["game", "typing", "multiplayer", "speed"]
+	},
+	{
+		"id": 20,
+		"title": "Idea Generator",
+		"description": "Generate random startup or project ideas instantly.",
+		"image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+		"timeEstimate": "3h",
+		"tags": ["generator", "ideas", "startup", "creative"]
+	},
+	{
+		"id": 21,
+		"title": "Minimal Journal",
+		"description": "A distraction-free journaling app with daily prompts.",
+		"image": "https://images.unsplash.com/photo-1519681393784-d120267933ba",
+		"timeEstimate": "5h",
+		"tags": ["journal", "writing", "minimal", "wellness"]
+	},
+	{
+		"id": 22,
+		"title": "URL Shortener",
+		"description": "Create and track custom short links.",
+		"image": "https://images.unsplash.com/photo-1521791136064-7986c2920216",
+		"timeEstimate": "4h",
+		"tags": ["tools", "backend", "links", "utility"]
+	},
+	{
+		"id": 23,
+		"title": "Weather Mood UI",
+		"description": "A weather app that changes theme based on mood and conditions.",
+		"image": "https://images.unsplash.com/photo-1501973801540-537f08ccae7b",
+		"timeEstimate": "5h",
+		"tags": ["weather", "ui", "dynamic", "design"]
+	},
+	{
+		"id": 24,
+		"title": "Memory Match",
+		"description": "Classic card matching game with smooth animations.",
+		"image": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+		"timeEstimate": "4h",
+		"tags": ["game", "memory", "cards", "fun"]
+	}
+]

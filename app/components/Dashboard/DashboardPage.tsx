@@ -2,10 +2,13 @@
 import Projectpopup from "./Projectpopup";
 import { PiSmileyWinkDuotone } from "react-icons/pi";
 import projects from "@/app/data/projects.json";
+import ideas from "@/app/data/ideas.json";
 import { useState } from "react";
+import Colorpopup from "./Colorpopup";
 
 const DashboardPage = () => {
 	const [selectedProject, setSelectedProject]: any = useState();
+	const [selectedColorIdea, setSelectedColorIdea]: any = useState();
 
 	return (
 		<div className="bg-green-200 w-full h-screen">
@@ -21,13 +24,11 @@ const DashboardPage = () => {
 				alt=""
 			/>
 			<div className="fixed top-[0vh] w-[27.5vw] h-[100vh] z-10 text-center items-center justify-center grid grid-cols-4 left-0 gap-[0.5vh] p-[1vh]">
-				{[
-					1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-					21, 22, 23, 24,
-				].map((item, i) => (
+				{ideas.slice(0, 24).map((idea, i) => (
 					<div
 						className="bg-blue-400/0 w-full h-full rounded-[1.5vh] cursor-pointer"
 						key={i}
+						onClick={() => setSelectedColorIdea(idea)}
 					></div>
 				))}
 			</div>
@@ -136,6 +137,13 @@ const DashboardPage = () => {
 				<Projectpopup
 					project={selectedProject}
 					onClose={() => setSelectedProject(null)}
+				/>
+			)}
+
+			{selectedColorIdea && (
+				<Colorpopup
+					idea={selectedColorIdea}
+					onClose={() => setSelectedColorIdea(null)}
 				/>
 			)}
 		</div>
