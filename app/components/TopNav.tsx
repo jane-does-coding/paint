@@ -5,10 +5,10 @@ const TopNav = ({ pageTitle }: any) => {
 		<div className="flex flex-col fixed left-[27.5vw] z-10 top-0">
 			<div className=" bg-amber-50/10 backdrop-blur-xs w-[72.5vw] flex items-center justify-start border-b-2 border-dotted">
 				<a
-					href="/create"
+					href="/"
 					className="border-r-2 border-black border-dotted flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center py-[1vh] "
 				>
-					Create
+					Projects
 				</a>
 				<a
 					href="/explore"
@@ -26,7 +26,7 @@ const TopNav = ({ pageTitle }: any) => {
 					href="/shop"
 					className="border-r-2 border-black border-dotted flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center py-[1vh] "
 				>
-					Shop
+					Leetcodes
 				</a>
 				<a
 					href="/calendar"
