@@ -65,19 +65,44 @@ const CreateProject = () => {
 					<div className="relative w-full">
 						<img
 							src="/imgs/canvas2-nobg.png"
-							className="w-full h-[10vh] relative drop-shadow-lg drop-shadow-black/70"
+							className="w-full h-[12vh] relative drop-shadow-lg drop-shadow-black/70"
 							alt=""
 						/>
-						<h3 className="absolute top-[2.5vh] text-[2.5vh] left-[3vw] finger-paint font-extrabold">
-							Hackatime Project
+						<h3 className="absolute top-[1.5vh] text-[2vh] left-[3vw] finger-paint font-extrabold">
+							Github Link
 						</h3>
+						<input
+							type="text"
+							placeholder="Code URL"
+							className="absolute mt-[1.5vh] font-extrabold top-[50%]  translate-y-[-50%] left-[3vw] w-[85%] text-[3vh] finger-paint focus:ring-0 focus:outline-0"
+						/>
+					</div>
+					<div className="relative w-full">
+						<img
+							src="/imgs/canvas2-nobg.png"
+							className="w-full h-[12vh] relative drop-shadow-lg drop-shadow-black/70"
+							alt=""
+						/>
+						<h3 className="absolute top-[1.5vh] text-[2vh] left-[3vw] finger-paint font-extrabold">
+							Demo Link
+						</h3>
+						<input
+							type="text"
+							placeholder="Demo URL"
+							className="absolute mt-[1.5vh] font-extrabold top-[50%]  translate-y-[-50%] left-[3vw] w-[85%] text-[3vh] finger-paint focus:ring-0 focus:outline-0"
+						/>
 					</div>
 				</div>
-				<div className="w-[40%]">
+				<div className="w-[40%] pt-[3vh]">
 					<div className="w-full sticky top-0">
 						<img
 							src="/imgs/canvas2-nobg.png"
 							className="w-full h-[45vh] relative drop-shadow-lg drop-shadow-black/70"
+							alt=""
+						/>
+						<img
+							src="/imgs/clip.png"
+							className="w-[8vw] h-[8vh] drop-shadow-sm drop-shadow-black/90 absolute top-[-5.5vh] left-[50%] translate-x-[-50%] z-10"
 							alt=""
 						/>
 						<div className="absolute w-full top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] mx-auto z-50 flex flex-col items-center justify-center transition-all ease-in-out">
