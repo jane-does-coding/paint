@@ -1,3 +1,4 @@
+import TopNav from "@/app/components/TopNav";
 import React from "react";
 import { IoCheckmark } from "react-icons/io5";
 import { PiSmileyWinkDuotone } from "react-icons/pi";
@@ -26,7 +27,7 @@ const CreateProject = () => {
 					></div>
 				))}
 			</div> */}
-			<div className=" fixed left-[27.5vw] z-10 top-[0vh] bg-amber-50/10 backdrop-blur-[4px] w-[72.5vw] flex items-center justify-start border-b-2 border-dotted">
+			{/* <div className=" fixed left-[27.5vw] z-10 top-[0vh] bg-amber-50/10 backdrop-blur-[4px] w-[72.5vw] flex items-center justify-start border-b-2 border-dotted">
 				<p className="border-r-2 border-black border-dotted flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center py-[1vh] ">
 					Create
 				</p>
@@ -42,12 +43,10 @@ const CreateProject = () => {
 				<p className="border-r-none border-black border-dotted flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center py-[1vh] ">
 					Calendar
 				</p>
-				{/* <img src="/imgs/paint.png" className="h-full w-auto " alt="idk" />
-				<img src="/imgs/brush.jpg" className="h-full w-auto" alt="idk" /> */}
 			</div>
 			<div className="bg-amber-50/10 backdrop-blur-[4px] fixed left-[27.5vw] top-[6.5vh] px-[3vw] w-[72.5vw] h-[9.25vh] flex items-center justify-between border-b-2 border-dotted border-black">
 				<h1 className="text-[4.5vh] finger-paint font-semibold">
-					Your Projects
+					Create Projects
 				</h1>
 				<div className="text-[3.5vh] finger-paint font-semibold flex items-center justify-center gap-[1vw] border-l-2 border-dotted h-full pl-[3vw]">
 					<span className="text-[5vh]">
@@ -55,8 +54,9 @@ const CreateProject = () => {
 					</span>
 					Jane Doe
 				</div>
-			</div>
-			<div className="bg-blue-300/0 border-t-2 border-black border-dotted left-[27.5vw] top-[15.5vh] gap-y-[2vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 flex overflow-y-auto h-[85vh] pb-[6vh] items-start pt-[4vh] z-11">
+			</div> */}
+			<TopNav pageTitle={"Create Project"} />
+			<div className="bg-blue-300/0 left-[27.5vw] top-[16vh] gap-y-[2vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 flex overflow-y-auto h-[85vh] pb-[6vh] items-start pt-[4vh] z-11">
 				<div className="flex flex-col gap-[2vh] w-[60%]">
 					<div className="relative w-full">
 						<img

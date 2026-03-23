@@ -5,6 +5,7 @@ import projects from "@/app/data/projects.json";
 import ideas from "@/app/data/ideas.json";
 import { useState } from "react";
 import Colorpopup from "./Colorpopup";
+import TopNav from "../TopNav";
 
 const DashboardPage = () => {
 	const [selectedProject, setSelectedProject]: any = useState();
@@ -32,7 +33,7 @@ const DashboardPage = () => {
 					></div>
 				))}
 			</div>
-			<div className=" fixed left-[27.5vw] z-10 top-[0vh] bg-amber-50/10 backdrop-blur-[4px] w-[72.5vw] flex items-center justify-start border-b-2 border-dotted">
+			{/* <div className=" fixed left-[27.5vw] z-10 top-[0vh] bg-amber-50/10 backdrop-blur-[4px] w-[72.5vw] flex items-center justify-start border-b-2 border-dotted">
 				<p className="border-r-2 border-black border-dotted flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center py-[1vh] ">
 					Create
 				</p>
@@ -48,8 +49,6 @@ const DashboardPage = () => {
 				<p className="border-r-none border-black border-dotted flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center py-[1vh] ">
 					Calendar
 				</p>
-				{/* <img src="/imgs/paint.png" className="h-full w-auto " alt="idk" />
-				<img src="/imgs/brush.jpg" className="h-full w-auto" alt="idk" /> */}
 			</div>
 			<div className="bg-amber-50/10 backdrop-blur-[4px] fixed left-[27.5vw] top-[6.5vh] px-[3vw] w-[72.5vw] h-[9.25vh] flex items-center justify-between">
 				<h1 className="text-[4.5vh] finger-paint font-semibold">
@@ -61,8 +60,9 @@ const DashboardPage = () => {
 					</span>
 					Jane Doe
 				</div>
-			</div>
-			<div className="bg-blue-300/0 border-t-2 border-black border-dotted left-[27.5vw] top-[15.5vh] gap-y-[8vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 grid grid-cols-3 overflow-y-auto h-[85vh] pb-[6vh] items-start pt-[8vh] z-11">
+			</div> */}
+			<TopNav pageTitle={"Your Projects"} />
+			<div className="bg-blue-300/0 left-[27.5vw] top-[16vh] gap-y-[8vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 grid grid-cols-3 overflow-y-auto h-[85vh] pb-[6vh] items-start pt-[8vh] z-11">
 				{/* Create new project canvas */}
 				<div className="relative h-fit overflow-visible group cursor-pointer">
 					<div className="duration-200 group-hover:rotate-4 relative group-hover:scale-105 transition-all ease-in-out z-30">
