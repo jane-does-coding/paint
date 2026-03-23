@@ -21,11 +21,19 @@ const FAQPage = () => {
 				<img src="/imgs/frame3.png" className="w-[20vw]" alt="" />
 				<img src="/imgs/frame4.jpg" className="w-[20vw]" alt="" />
 				<img src="/imgs/frame5.jpg" className="w-[20vw]" alt="" /> */}
-				<div className="w-[30vw] h-[32.5vh] overflow-hidden absolute top-[3vh] left-[2vw] drop-shadow-xl drop-shadow-black/60 rounded-[0.25vh]">
-					<p className="finger-paint text-[2vh] absolute top-[3vh] left-[2vw] w-[12vw] bg-green-300/0 z-10">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, esse.
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum,
-						atque?
+				<div className="w-[30vw] h-[32.5vh] overflow-hidden absolute top-[3vh] left-[2vw] drop-shadow-xl drop-shadow-black/60 rounded-[0.25vh] border-2 border-dotted border-black bg-white">
+					<p className="finger-paint text-[2vh] absolute top-[3.75vh] left-[2.25vw] w-[11vw] bg-green-300/0 z-10">
+						Fully complete{" "}
+						<span className="font-extrabold italic text-blue-800">
+							one project
+						</span>{" "}
+						each{" "}
+						<span className="font-extrabold italic text-blue-800">15 days</span>
+						. By the end of the challenge you'll have{" "}
+						<span className="font-extrabold italic text-blue-800">
+							5 fully completed projects
+						</span>{" "}
+						for your portfolio
 					</p>
 					<img
 						src="/imgs/frame6.jpg"
@@ -33,24 +41,36 @@ const FAQPage = () => {
 						alt=""
 					/>
 				</div>
-				<div className="w-[30vw] h-[40vh] overflow-hidden absolute top-[39vh] left-[2vw] drop-shadow-xl drop-shadow-black/60 rounded-[0.25vh] bg-white">
-					<p className="finger-paint text-[2.75vh] absolute top-[2vh] left-[2vw] w-[26vw] bg-green-300/0 z-10">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, esse.
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum,
-						atque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Sapiente, consequuntur.
+				<div className="w-[30vw] h-[40vh] overflow-hidden absolute top-[39vh] left-[2vw] drop-shadow-xl drop-shadow-black/60 rounded-[0.25vh] border-2 border-dotted border-black bg-white bg-white">
+					<p className="finger-paint text-[3vh] absolute top-[2vh] left-[2vw] w-[26vw] bg-green-300/0 z-10">
+						During those{" "}
+						<span className="font-extrabold italic text-blue-800">75 days</span>
+						, you must do{" "}
+						<span className="font-extrabold italic text-blue-800">
+							2+ hours
+						</span>{" "}
+						of programming every day, which can be working on meeting the goal
+						requirements for{" "}
+						<span className="font-extrabold italic text-blue-800">
+							Leetcode or the Projects.
+						</span>
 					</p>
 					<img
 						src="/imgs/paper3.png"
-						className="w-[30vw] h-[40vh] object-cover scale-105 opacity-70"
+						className="w-[30vw] h-[40vh] object-cover scale-105 opacity-60"
 						alt=""
 					/>
 				</div>
-				<div className="w-[36vw] h-[34vh] overflow-hidden absolute top-[45vh] left-[34vw] drop-shadow-xl drop-shadow-black/60 bg-white">
-					<p className="finger-paint text-[2.5vh] text-black  absolute top-[2.5vh] left-[2vw] w-[25vw] bg-green-300/0 z-10">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, esse.
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum,
-						atque?
+				<div className="w-[36vw] h-[34vh] overflow-hidden absolute top-[45vh] left-[34vw] drop-shadow-xl drop-shadow-black/60 bg-white rounded-[0.25vh] border-2 border-dotted border-black bg-white">
+					<p className="finger-paint text-[2.5vh] text-black  absolute top-[2.5vh] left-[2vw] w-[32vw] bg-green-300/0 z-10">
+						Once you complete the challenge by getting to{" "}
+						<span className="font-extrabold italic text-blue-800">day 75</span>{" "}
+						without missing a single day you'll get a{" "}
+						<span className="font-extrabold italic text-blue-800">
+							cetificate of completing
+						</span>
+						, highlighting all your projects, solved leetcode problems, all the
+						hours you've spent programming, and more!
 					</p>
 					<img
 						src="/imgs/paper5.jpg"
@@ -58,23 +78,32 @@ const FAQPage = () => {
 						alt=""
 					/>
 				</div>
-				<div className="w-[15vw] h-[40vh] overflow-hidden absolute top-[3vh] left-[34vw] drop-shadow-xl drop-shadow-black/60 bg-white">
+				<div className="w-[15vw] h-[40vh] overflow-hidden absolute top-[3vh] left-[34vw] drop-shadow-xl drop-shadow-black/60 bg-white rounded-[0.25vh] border-2 border-dotted border-black bg-white">
 					<p className="finger-paint text-[2.25vh] text-black absolute top-[2.5vh] left-[2.75vw] w-[12vw] bg-green-300/0 z-10">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, esse.
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum,
-						atque?
+						Complete{" "}
+						<span className="font-extrabold italic text-blue-800">
+							50 Leetcode coding problems
+						</span>{" "}
+						by the end of the challenge to sharpen your{" "}
+						<span className="font-extrabold italic text-blue-800">
+							problem-solving skills
+						</span>{" "}
+						and enhance your resume.
 					</p>
 					<img
 						src="/imgs/paper2.jpg"
-						className="w-[15vw] h-[40vh] object-cover opacity-90"
+						className="w-[15vw] h-[40vh] object-cover opacity-80"
 						alt=""
 					/>
 				</div>
-				<div className="w-[20vw] h-[40vh] overflow-hidden absolute top-[3vh] left-[50.75vw] drop-shadow-xl drop-shadow-black/60 bg-white">
-					<p className="finger-paint text-[2.5vh] text-black absolute top-[2.5vh] left-[2vw] w-[16vw] bg-green-300/0 z-10">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, esse.
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum,
-						atque?
+				<div className="w-[20vw] h-[40vh] overflow-hidden absolute top-[3vh] left-[50.75vw] drop-shadow-xl drop-shadow-black/60 bg-white rounded-[0.25vh] border-2 border-dotted border-black bg-white">
+					<p className="finger-paint text-[2.6vh] text-black absolute top-[2.5vh] left-[2vw] w-[16vw] bg-green-300/0 z-10">
+						If you miss any rule, like not programming for a day or not
+						completing a project you would need to{" "}
+						<span className="font-extrabold italic text-blue-800">
+							start all over from day 1
+						</span>{" "}
+						again.
 					</p>
 					<img
 						src="/imgs/paper3.png"
