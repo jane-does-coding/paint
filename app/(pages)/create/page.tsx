@@ -73,21 +73,45 @@ const CreateProject = () => {
 							</h2>
 						</div>
 					</div>
-					<img
-						src="/imgs/canvas2-nobg.png"
-						className="w-[60%] h-[10vh] relative drop-shadow-lg drop-shadow-black/70"
-						alt=""
-					/>
-					<img
-						src="/imgs/canvas2-nobg.png"
-						className="w-[60%] h-[30vh] relative drop-shadow-lg drop-shadow-black/70"
-						alt=""
-					/>
-					<img
-						src="/imgs/canvas2-nobg.png"
-						className="w-[60%] h-[10vh] relative drop-shadow-lg drop-shadow-black/70"
-						alt=""
-					/>
+					<div className="relative w-full">
+						<img
+							src="/imgs/canvas2-nobg.png"
+							className="w-full h-[12vh] relative drop-shadow-lg drop-shadow-black/70"
+							alt=""
+						/>
+						<h3 className="absolute top-[1.5vh] text-[2vh] left-[3vw] finger-paint font-extrabold">
+							Project Name
+						</h3>
+						<input
+							type="text"
+							placeholder="Your Next Masterpiece"
+							className="absolute mt-[1.5vh] font-extrabold top-[50%]  translate-y-[-50%] left-[3vw] w-[85%] text-[3vh] finger-paint focus:ring-0 focus:outline-0"
+						/>
+					</div>
+					<div className="relative w-full">
+						<img
+							src="/imgs/canvas2-nobg.png"
+							className="w-full h-[30vh] relative drop-shadow-lg drop-shadow-black/70"
+							alt=""
+						/>
+						<h3 className="absolute top-[2.75vh] text-[2vh] left-[3vw] finger-paint font-extrabold">
+							Project Description
+						</h3>
+						<textarea
+							placeholder="Your Next Masterpiece"
+							className="absolute mt-[1.5vh] h-[19vh] resize-none font-extrabold top-[50%] translate-y-[-50%] left-[3vw] w-[85%] text-[3vh] finger-paint focus:ring-0 focus:outline-0"
+						/>
+					</div>
+					<div className="relative w-full">
+						<img
+							src="/imgs/canvas2-nobg.png"
+							className="w-full h-[10vh] relative drop-shadow-lg drop-shadow-black/70"
+							alt=""
+						/>
+						<h3 className="absolute top-[2.5vh] text-[2.5vh] left-[3vw] finger-paint font-extrabold">
+							Hackatime Project
+						</h3>
+					</div>
 				</div>
 				<div className="w-[40%]">
 					<div className="w-full sticky top-0">
