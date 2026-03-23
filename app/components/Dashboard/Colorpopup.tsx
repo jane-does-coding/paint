@@ -1,7 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { IoCheckmark } from "react-icons/io5";
-import { RxCross2 } from "react-icons/rx";
 
 const Colorpopup = ({ idea, onClose }: any) => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -58,45 +56,6 @@ const Colorpopup = ({ idea, onClose }: any) => {
 							alt=""
 							className="w-full h-[27.5vh] object-cover rounded-[0.5vh] border-2 border-black"
 						/>
-
-						{/* <div className="flex gap-[0.75vw] mt-[2vh]">
-							<a
-								href={idea.demo}
-								className="bg-black text-white finger-paint rounded-[1vh] py-[0.75vh] text-[2vh] w-full flex items-center justify-center"
-							>
-								Demo
-							</a>
-							<a
-								href={idea.github}
-								className="bg-black text-white finger-paint rounded-[1vh] py-[0.75vh] text-[2vh] w-full flex items-center justify-center"
-							>
-								Github
-							</a>
-						</div> */}
-
-						{/* <div className="flex flex-col gap-[1vh] mt-[2vh]">
-							{[
-								{ label: "Experienceable Demo Link", value: idea.demo },
-								{ label: "Public GitHub URL", value: idea.github },
-								{ label: "README URL", value: idea.readme },
-								{ label: "Project Description", value: idea.description },
-								{ label: "Project screenshot", value: idea.image },
-							].map((item, i) => (
-								<p
-									key={i}
-									className="finger-paint text-[2.5vh] flex items-center gap-[1vw]"
-								>
-									<span
-										className={`p-[0.25vh] bg-amber-50 border-2 rounded-full ${
-											item.value ? "text-green-600" : "text-red-600"
-										}`}
-									>
-										{item.value ? <IoCheckmark /> : <RxCross2 />}
-									</span>
-									{item.label}
-								</p>
-							))}
-						</div> */}
 					</div>
 
 					<div className="w-11/20 pl-[2vw] h-full overflow-y-auto pt-[1vh]">
@@ -127,15 +86,6 @@ const Colorpopup = ({ idea, onClose }: any) => {
 								</p>
 							</div>
 						</div>
-
-						{/* <div className="flex gap-[0.75vw] mt-[2vh]">
-							<a className="bg-black text-white finger-paint rounded-[1vh] py-[0.75vh] text-[2vh] w-full flex items-center justify-center">
-								Edit
-							</a>
-							<a className="bg-black text-white finger-paint rounded-[1vh] py-[0.75vh] text-[2vh] w-full flex items-center justify-center">
-								Delete
-							</a>
-						</div> */}
 					</div>
 				</div>
 

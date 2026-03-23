@@ -1,6 +1,5 @@
 "use client";
 import Projectpopup from "./Projectpopup";
-import { PiSmileyWinkDuotone } from "react-icons/pi";
 import projects from "@/app/data/projects.json";
 import ideas from "@/app/data/ideas.json";
 import { useState } from "react";
@@ -21,10 +20,10 @@ const DashboardPage = () => {
 
 			<img
 				src="/imgs/paint-pallete.jpg"
-				className="h-[100vh] w-[27.5vw] fixed top-[0vh] left-0 z-10"
+				className="h-screen w-[27.5vw] fixed top-0 left-0 z-10"
 				alt=""
 			/>
-			<div className="fixed top-[0vh] w-[27.5vw] h-[100vh] z-10 text-center items-center justify-center grid grid-cols-4 left-0 gap-[0.5vh] p-[1vh]">
+			<div className="fixed top-0 w-[27.5vw] h-screen z-10 text-center items-center justify-center grid grid-cols-4 left-0 gap-[0.5vh] p-[1vh]">
 				{ideas.slice(0, 24).map((idea, i) => (
 					<div
 						className="bg-blue-400/0 w-full h-full rounded-[1.5vh] cursor-pointer"
@@ -33,38 +32,14 @@ const DashboardPage = () => {
 					></div>
 				))}
 			</div>
-			{/* <div className=" fixed left-[27.5vw] z-10 top-[0vh] bg-amber-50/10 backdrop-blur-[4px] w-[72.5vw] flex items-center justify-start border-b-2 border-dotted">
-				<p className="border-r-2 border-black border-dotted flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center py-[1vh] ">
-					Create
-				</p>
-				<p className="border-r-2 border-black border-dotted flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center py-[1vh] ">
-					Explore
-				</p>
-				<p className="border-r-2 border-black border-dotted flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center py-[1vh] ">
-					FAQ
-				</p>
-				<p className="border-r-2 border-black border-dotted flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center py-[1vh] ">
-					Shop
-				</p>
-				<p className="border-r-none border-black border-dotted flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center py-[1vh] ">
-					Calendar
-				</p>
-			</div>
-			<div className="bg-amber-50/10 backdrop-blur-[4px] fixed left-[27.5vw] top-[6.5vh] px-[3vw] w-[72.5vw] h-[9.25vh] flex items-center justify-between">
-				<h1 className="text-[4.5vh] finger-paint font-semibold">
-					Your Projects
-				</h1>
-				<div className="text-[3.5vh] finger-paint font-semibold flex items-center justify-center gap-[1vw] border-l-2 border-dotted h-full pl-[3vw]">
-					<span className="text-[5vh]">
-						<PiSmileyWinkDuotone />
-					</span>
-					Jane Doe
-				</div>
-			</div> */}
+
 			<TopNav pageTitle={"Your Projects"} />
 			<div className="bg-blue-300/0 left-[27.5vw] top-[16vh] gap-y-[8vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 grid grid-cols-3 overflow-y-auto h-[85vh] pb-[6vh] items-start pt-[8vh] z-11">
 				{/* Create new project canvas */}
-				<div className="relative h-fit overflow-visible group cursor-pointer">
+				<a
+					href="/create"
+					className="relative h-fit overflow-visible group cursor-pointer"
+				>
 					<div className="duration-200 group-hover:rotate-4 relative group-hover:scale-105 transition-all ease-in-out z-30">
 						<div className="absolute w-full top-[5vh] left-[50%] translate-x-[-50%] mx-auto z-50 flex flex-col items-center justify-center transition-all ease-in-out">
 							<h2 className="text-[8vh] h-fit leading-[8vh] z-5  text-black trnasition-all ease-in-out finger-paint relative">
@@ -95,7 +70,7 @@ const DashboardPage = () => {
 							alt=""
 						/>
 					</div>
-				</div>
+				</a>
 				{projects.map((project, i) => (
 					<div
 						className="relative h-fit overflow-visible group cursor-pointer"

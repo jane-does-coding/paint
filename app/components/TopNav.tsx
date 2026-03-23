@@ -1,10 +1,9 @@
-import React from "react";
 import { PiSmileyWinkDuotone } from "react-icons/pi";
 
 const TopNav = ({ pageTitle }: any) => {
 	return (
-		<div className="flex flex-col fixed left-[27.5vw] z-10 top-[0vh]">
-			<div className=" bg-amber-50/10 backdrop-blur-[4px] w-[72.5vw] flex items-center justify-start border-b-2 border-dotted">
+		<div className="flex flex-col fixed left-[27.5vw] z-10 top-0">
+			<div className=" bg-amber-50/10 backdrop-blur-xs w-[72.5vw] flex items-center justify-start border-b-2 border-dotted">
 				<a
 					href="/create"
 					className="border-r-2 border-black border-dotted flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center py-[1vh] "
@@ -36,14 +35,17 @@ const TopNav = ({ pageTitle }: any) => {
 					Calendar
 				</a>
 			</div>
-			<div className="bg-amber-50/10 backdrop-blur-[4px] px-[3vw] w-[72.5vw] h-[9.25vh] flex items-center justify-between border-b-2 border-dotted border-black">
+			<div className="bg-amber-50/10 backdrop-blur-xs px-[3vw] w-[72.5vw] h-[9.25vh] flex items-center justify-between border-b-2 border-dotted border-black">
 				<h1 className="text-[4.5vh] finger-paint font-semibold">{pageTitle}</h1>
-				<div className="text-[3.5vh] finger-paint font-semibold flex items-center justify-center gap-[1vw] border-l-2 border-dotted h-full pl-[3vw]">
+				<a
+					href="/profile"
+					className="text-[3.5vh] finger-paint font-semibold flex items-center justify-center gap-[1vw] border-l-2 border-dotted h-full pl-[3vw]"
+				>
 					<span className="text-[5vh]">
 						<PiSmileyWinkDuotone />
 					</span>
 					Jane Doe
-				</div>
+				</a>
 			</div>
 		</div>
 	);
