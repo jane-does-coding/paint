@@ -5,10 +5,12 @@ import ideas from "@/app/data/ideas.json";
 import { useState } from "react";
 import Colorpopup from "./Colorpopup";
 import TopNav from "../TopNav";
+import Onboarding from "../Onboarding/Onboarding";
 
 const DashboardPage = () => {
 	const [selectedProject, setSelectedProject]: any = useState();
 	const [selectedColorIdea, setSelectedColorIdea]: any = useState();
+	const [isOnborading, setIsOnborading]: any = useState(true);
 
 	return (
 		<div className="bg-green-200 w-full h-screen">
@@ -17,12 +19,22 @@ const DashboardPage = () => {
 				className="h-screen w-full fixed top-0 left-0"
 				alt=""
 			/>
-
 			<img
 				src="/imgs/paint-pallete.jpg"
 				className="h-screen w-[27.5vw] fixed top-0 left-0 z-10"
 				alt=""
 			/>
+
+			{isOnborading ? (
+				<Onboarding />
+			) : (
+				<img
+					src="/imgs/raccoons/raccoon-bird-front.png"
+					className="w-[10vw] fixed bottom-0 right-[2vw] z-19 drop-shadow-xl drop-shadow-black"
+					alt=""
+				/>
+			)}
+
 			<div className="fixed top-0 w-[27.5vw] h-screen z-10 text-center items-center justify-center grid grid-cols-4 left-0 gap-[0.5vh] p-[1vh]">
 				{ideas.slice(0, 24).map((idea, i) => (
 					<div
@@ -32,7 +44,6 @@ const DashboardPage = () => {
 					></div>
 				))}
 			</div>
-
 			<TopNav pageTitle={"Your Projects"} />
 			<div className="bg-blue-300/0 left-[27.5vw] top-[16vh] gap-y-[8vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 grid grid-cols-3 overflow-y-auto h-[85vh] pb-[6vh] items-start pt-[8vh] z-11">
 				{/* Create new project canvas */}
@@ -107,14 +118,12 @@ const DashboardPage = () => {
 					</div>
 				))}
 			</div>
-
 			{selectedProject && (
 				<Projectpopup
 					project={selectedProject}
 					onClose={() => setSelectedProject(null)}
 				/>
 			)}
-
 			{selectedColorIdea && (
 				<Colorpopup
 					idea={selectedColorIdea}
