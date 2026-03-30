@@ -1,18 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Onboarding = () => {
-	const step1 = {
-		title: "Meet Floof and Feathers...",
-		description:
-			"The creators of the 75 Hard Challenge for Programmers, who will be helping you throughout this challenge",
-		image: "/imgs/raccoons/raccoon-bird-side.png",
+	const [currentStep, setCurrentStep] = useState(0);
+
+	const steps = [
+		{
+			title: "Meet Floof and Feathers...",
+			description:
+				"The creators of the 75 Hard Challenge for Programmers, who will guide you through this journey.",
+			image: "/imgs/raccoons/raccoon-bird-side.png",
+		},
+		{
+			title: "Code Every Day",
+			description:
+				"You must code for at least 2+ hours every single day. This is deep work only — no distractions, no excuses.",
+			image: "/imgs/raccoons/raccoon-laptop.png",
+		},
+		{
+			title: "Ship Projects",
+			description:
+				"Every 15 days, you must complete and submit a project. No unfinished ideas — you ship or you restart.",
+			image: "/imgs/raccoons/raccoon-build.png",
+		},
+		{
+			title: "Sharpen Your Mind",
+			description:
+				"Solve LeetCode problems every day (except weekends). Train your problem-solving like a weapon.",
+			image: "/imgs/raccoons/raccoon-think.png",
+		},
+	];
+
+	const handleNext = () => {
+		if (currentStep < steps.length - 1) {
+			setCurrentStep(currentStep + 1);
+		}
 	};
+
+	const step = steps[currentStep];
 
 	return (
 		<div className="bg-blue-500/0 z-70 backdrop-blur-[2px] w-[70vw] h-[35vh] fixed bottom-[5vh] left-[50%] translate-x-[-50%] drop-shadow-2xl drop-shadow-black">
 			<div
 				className={`bg-[#f0e6da] h-[35vh] w-[70vw] fixed left-[0vw]
-				rounded-[1vh] shadow-lg shadow-black/50 overflow-hidden px-[3vw] pt-[2vh] border-4 border-dashed border-black pb-[2vh] flex
+				rounded-[1vh] shadow-lg shadow-black/50 overflow-hidden px-[3vw] pt-[2vh] border-3 border-dashed border-black pb-[2vh] flex
 				transition-all duration-200 z-19 opacity-100 translate-y-0`}
 			>
 				<img
@@ -20,18 +50,27 @@ const Onboarding = () => {
 					className="absolute top-0 left-0 w-full h-full opacity-30 z-1"
 					alt=""
 				/>
+
 				<img
-					src={`${step1.image}`}
+					src={step.image}
 					className="w-[13vw] h-fit mt-auto drop-shadow-md drop-shadow-black/80 z-30"
 					alt=""
 				/>
-				<div className="flex flex-col z-10 ml-[3vw] pt-[3vh]">
-					<h3 className="text-[2.75vh] finger-paint">{step1.title}</h3>
-					<p className="finger-paint text-[2.75vh] mt-[3vh]">
-						{step1.description}
+
+				<div className="flex flex-col z-10 ml-[3vw] pt-[4vh]">
+					<h3 className="text-[2.75vh] finger-paint">{step.title}</h3>
+
+					<p className="finger-paint text-[2.75vh] mt-[1vh]">
+						{step.description}
 					</p>
-					<p className="finger-paint text-[2.5vh] mt-[2vh] absolute bottom-[4vh] right-[3vw]">
-						Continue {"->"}
+
+					<p
+						onClick={handleNext}
+						className="cursor-pointer finger-paint text-[2.5vh] mt-[2vh] absolute bottom-[4vh] right-[3vw]"
+					>
+						{currentStep === steps.length - 1
+							? "Start Challenge"
+							: "Continue →"}
 					</p>
 				</div>
 			</div>
