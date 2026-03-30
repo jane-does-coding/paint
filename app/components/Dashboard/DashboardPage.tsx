@@ -10,7 +10,7 @@ import Onboarding from "../Onboarding/Onboarding";
 const DashboardPage = () => {
 	const [selectedProject, setSelectedProject]: any = useState();
 	const [selectedColorIdea, setSelectedColorIdea]: any = useState();
-	const [isOnborading, setIsOnborading]: any = useState(true);
+	const [isOnborading, setIsOnborading]: any = useState(false);
 
 	return (
 		<div className="bg-green-200 w-full h-screen">

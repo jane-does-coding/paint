@@ -14,19 +14,19 @@ const Onboarding = () => {
 			title: "Code Every Day",
 			description:
 				"You must code for at least 2+ hours every single day. This is deep work only — no distractions, no excuses.",
-			image: "/imgs/raccoons/raccoon-laptop.png",
+			image: "/imgs/raccoons/raccoon-bird-stand-side.png",
 		},
 		{
 			title: "Ship Projects",
 			description:
 				"Every 15 days, you must complete and submit a project. No unfinished ideas — you ship or you restart.",
-			image: "/imgs/raccoons/raccoon-build.png",
+			image: "/imgs/raccoons/raccoon-bird-react.png",
 		},
 		{
 			title: "Sharpen Your Mind",
 			description:
 				"Solve LeetCode problems every day (except weekends). Train your problem-solving like a weapon.",
-			image: "/imgs/raccoons/raccoon-think.png",
+			image: "/imgs/raccoons/raccoon-bird-think.png",
 		},
 	];
 
@@ -51,11 +51,13 @@ const Onboarding = () => {
 					alt=""
 				/>
 
-				<img
-					src={step.image}
-					className="w-[13vw] h-fit mt-auto drop-shadow-md drop-shadow-black/80 z-30"
-					alt=""
-				/>
+				<div className="w-[20vw] z-30 flex items-center justify-center">
+					<img
+						src={step.image}
+						className="w-fit h-full mt-auto drop-shadow-md drop-shadow-black/80 z-30"
+						alt=""
+					/>
+				</div>
 
 				<div className="flex flex-col z-10 ml-[3vw] pt-[4vh]">
 					<h3 className="text-[2.75vh] finger-paint">{step.title}</h3>
