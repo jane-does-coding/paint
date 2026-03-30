@@ -68,8 +68,8 @@ const RegisterPage = () => {
 			/>
 
 			<div className="min-w-[32vw] bg-white border-3 border-dashed border-black drop-shadow-md flex flex-col z-10 rounded-[1vh] mt-[5vh]">
-				<div className="border-b-2 border-dashed border-black py-[2.5vh] px-[2vw] z-10">
-					<h1 className="text-[4vh] leading-[4vh] mt-[2vh] text-center font-bold finger-paint">
+				<div className="border-b-3 border-dashed border-black py-[2.5vh] pb-[2vh] px-[2vw] z-10">
+					<h1 className="text-[5vh] leading-[4vh] mt-[2vh] text-center font-extralight mellow">
 						Register
 					</h1>
 				</div>
@@ -141,7 +141,7 @@ const RegisterPage = () => {
 					</button>
 				</form>
 
-				<div className="border-t-2 border-dashed border-black py-[2vh] text-center text-[2.2vh] z-10">
+				<div className="border-t-3 border-dashed border-black py-[2vh] text-center text-[1.75vh] z-10 finger-paint font-bold">
 					Already have an account?{" "}
 					<a
 						href="/login"
