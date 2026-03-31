@@ -10,6 +10,8 @@
 - /explore
 - /faq
 
+<img width="1710" height="1675" alt="Frame 121" src="https://github.com/user-attachments/assets/0eb0cfbc-d938-489f-b3e9-001bd575c060" />
+
 ---
 
 ### Routes:
