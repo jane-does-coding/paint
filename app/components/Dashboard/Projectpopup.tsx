@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import { IoCheckmark } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 
-const Projectpopup = ({ project, onClose }: any) => {
+const Projectpopup = ({ project, onClose, onDelete }: any) => {
 	const [isVisible, setIsVisible] = useState(false);
+	const [isDeleting, setIsDeleting] = useState(false);
 
 	useEffect(() => {
 		setIsVisible(true);
@@ -15,6 +16,33 @@ const Projectpopup = ({ project, onClose }: any) => {
 		setTimeout(() => {
 			onClose();
 		}, 200);
+	};
+
+	const handleDelete = async () => {
+		if (!confirm("Are you sure you want to delete this project?")) return;
+
+		try {
+			setIsDeleting(true);
+			console.log(project.id);
+			const res = await fetch(`/api/projects/${project.id}`, {
+				method: "DELETE",
+			});
+
+			if (!res.ok) {
+				const text = await res.text();
+				alert("Failed to delete project: " + text);
+				setIsDeleting(false);
+				return;
+			}
+
+			if (onDelete) onDelete(project.id);
+
+			handleClose();
+		} catch (err) {
+			console.error(err);
+			alert("Something went wrong!");
+			setIsDeleting(false);
+		}
 	};
 
 	return (
@@ -52,6 +80,7 @@ const Projectpopup = ({ project, onClose }: any) => {
 				</div>
 
 				<div className="flex w-full h-full relative z-10">
+					{/* LEFT PANEL */}
 					<div className="w-9/20">
 						<img
 							src={project.image}
@@ -99,6 +128,7 @@ const Projectpopup = ({ project, onClose }: any) => {
 						</div>
 					</div>
 
+					{/* RIGHT PANEL */}
 					<div className="w-11/20 pl-[2vw] h-full overflow-y-auto pt-[1vh]">
 						<h2 className="mellow text-[6vh] leading-[7vh]">{project.title}</h2>
 
@@ -118,32 +148,16 @@ const Projectpopup = ({ project, onClose }: any) => {
 						</p>
 
 						<div className="flex w-full gap-[0.75vw] mt-[2vh]">
-							<div className="border-2 border-black w-1/2 rounded-[1vh] flex flex-col items-center justify-center py-[2vh] bg-amber-50/50 backdrop-blur-xs">
-								<p className="finger-paint text-[3vh] font-extrabold">
-									{project.timeLogged}
-								</p>
-								<p className="finger-paint text-[1.75vh] mt-[1vh]">
-									Time Logged
-								</p>
-							</div>
-
-							<div className="border-2 border-black w-1/2 rounded-[1vh] flex flex-col items-center justify-center py-[2vh] bg-amber-50/50 backdrop-blur-xs">
-								<p className="finger-paint text-[3vh] font-extrabold">
-									{project.timeApproved}
-								</p>
-								<p className="finger-paint text-[1.75vh] mt-[1vh]">
-									Time Approved
-								</p>
-							</div>
-						</div>
-
-						<div className="flex gap-[0.75vw] mt-[2vh]">
 							<a className="bg-black text-white finger-paint rounded-[1vh] py-[0.75vh] text-[2vh] w-full flex items-center justify-center">
 								Edit
 							</a>
-							<a className="bg-black text-white finger-paint rounded-[1vh] py-[0.75vh] text-[2vh] w-full flex items-center justify-center">
-								Delete
-							</a>
+							<button
+								onClick={handleDelete}
+								disabled={isDeleting}
+								className="bg-red-600 text-white finger-paint rounded-[1vh] py-[0.75vh] text-[2vh] w-full flex items-center justify-center"
+							>
+								{isDeleting ? "Deleting..." : "Delete"}
+							</button>
 						</div>
 					</div>
 				</div>
