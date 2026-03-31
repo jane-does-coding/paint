@@ -53,8 +53,8 @@ const CreateProject = () => {
 			/>
 
 			<img
-				src="/imgs/raccoons/raccoon-bird-lay-side.png"
-				className="w-[17.5vw] fixed bottom-0 right-[2vw] z-19 drop-shadow-xl drop-shadow-black"
+				src="/imgs/raccoons/raccoon-bird-lay.png"
+				className="w-[14vw] -scale-x-100 fixed bottom-0 right-[3vw] z-19 drop-shadow-xl drop-shadow-black"
 				alt=""
 			/>
 
@@ -206,7 +206,7 @@ const CreateProject = () => {
 
 				<div className="w-[40%] pt-[3vh]">
 					<div className="w-full sticky top-0">
-						<img src="/imgs/canvas2-nobg.png" className="w-full h-[45vh]" />
+						<img src="/imgs/canvas2-nobg.png" className="w-full h-[47.5vh]" />
 						<img
 							src="/imgs/clip.png"
 							className="w-[10vw] h-[10vh] drop-shadow-sm drop-shadow-black/90 absolute top-[-6.5vh] left-[50%] translate-x-[-50%] z-10"
@@ -214,9 +214,9 @@ const CreateProject = () => {
 						/>
 
 						<div className="absolute w-full top-[50%] translate-y-[-50%] flex flex-col items-center">
-							<h2 className="mellow text-[4vh]">Requirements</h2>
+							<h2 className="mellow text-[4vh] mt-[1vh]">Requirements</h2>
 
-							<div className="flex flex-col gap-[1vh] mt-[2vh]">
+							<div className="flex flex-col gap-[1vh] mt-[0vh]">
 								{requirements.map((item, i) => (
 									<p
 										key={i}

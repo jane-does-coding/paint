@@ -16,7 +16,8 @@
 
 ### Routes:
 
-- register
+- /register
+- /projects
 
 ---
 
