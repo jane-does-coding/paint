@@ -1,13 +1,13 @@
 "use client";
 import Projectpopup from "./Projectpopup";
-import projects from "@/app/data/projects.json";
 import ideas from "@/app/data/ideas.json";
 import { useState } from "react";
 import Colorpopup from "./Colorpopup";
 import TopNav from "../TopNav";
 import Onboarding from "../Onboarding/Onboarding";
+import { Project } from "@prisma/client";
 
-const DashboardPage = () => {
+const DashboardPage = ({ projects = [] }: { projects?: Project[] | null }) => {
 	const [selectedProject, setSelectedProject]: any = useState();
 	const [selectedColorIdea, setSelectedColorIdea]: any = useState();
 	const [isOnborading, setIsOnborading]: any = useState(false);
@@ -82,41 +82,42 @@ const DashboardPage = () => {
 						/>
 					</div>
 				</a>
-				{projects.map((project, i) => (
-					<div
-						className="relative h-fit overflow-visible group cursor-pointer"
-						onClick={() => setSelectedProject(project)}
-						key={i}
-					>
-						<div className="duration-200 group-hover:rotate-4 relative group-hover:scale-105 transition-all ease-in-out z-30">
-							<img
-								src="/imgs/canvas2-nobg.png"
-								className="w-full h-[22.5vh] drop-shadow-lg group-hover:drop-shadow-black/70 transition-all group-hover:drop-shadow-xl drop-shadow-black/90 relative z-2"
-								alt=""
-							/>
-							<img
-								src={project.image}
-								alt=""
-								className="absolute w-[90%] h-[87.5%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] object-cover rounded-[0.5vh] z-10"
-							/>
-							<img
-								src="/imgs/clip.png"
-								className="w-[8vw] h-[8vh] drop-shadow-sm drop-shadow-black/90 absolute top-[-5.5vh] left-[50%] translate-x-[-50%] z-10"
-								alt=""
-							/>
+				{projects &&
+					projects.map((project, i: number) => (
+						<div
+							className="relative h-fit overflow-visible group cursor-pointer"
+							onClick={() => setSelectedProject(project)}
+							key={i}
+						>
+							<div className="duration-200 group-hover:rotate-4 relative group-hover:scale-105 transition-all ease-in-out z-30">
+								<img
+									src="/imgs/canvas2-nobg.png"
+									className="w-full h-[22.5vh] drop-shadow-lg group-hover:drop-shadow-black/70 transition-all group-hover:drop-shadow-xl drop-shadow-black/90 relative z-2"
+									alt=""
+								/>
+								<img
+									src={project.image}
+									alt=""
+									className="absolute w-[90%] h-[87.5%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] object-cover rounded-[0.5vh] z-10"
+								/>
+								<img
+									src="/imgs/clip.png"
+									className="w-[8vw] h-[8vh] drop-shadow-sm drop-shadow-black/90 absolute top-[-5.5vh] left-[50%] translate-x-[-50%] z-10"
+									alt=""
+								/>
+							</div>
+							<div className=" group-hover:-rotate-2 duration-200 group-hover:scale-[103%] transition-all ease-in-out z-5 flex flex-col items-center justify-center relative">
+								<h2 className="absolute top-[50%] px-[0.75vw] translate-y-[-50%] text-[2vh] w-full text-center z-20 left-[50%] translate-x-[-50%] text-black italic font-extrabold finger-paint">
+									{project.title}
+								</h2>
+								<img
+									src="/imgs/canvas2-nobg.png"
+									className="w-full h-[10vh] drop-shadow-lg group-hover:drop-shadow-black/70 transition-all group-hover:drop-shadow-xl drop-shadow-black/90 relative z-2 mt-[1vh]"
+									alt=""
+								/>
+							</div>
 						</div>
-						<div className=" group-hover:-rotate-2 duration-200 group-hover:scale-[103%] transition-all ease-in-out z-5 flex flex-col items-center justify-center relative">
-							<h2 className="absolute top-[50%] px-[0.75vw] translate-y-[-50%] text-[2vh] w-full text-center z-20 left-[50%] translate-x-[-50%] text-black italic font-extrabold finger-paint">
-								{project.title}
-							</h2>
-							<img
-								src="/imgs/canvas2-nobg.png"
-								className="w-full h-[10vh] drop-shadow-lg group-hover:drop-shadow-black/70 transition-all group-hover:drop-shadow-xl drop-shadow-black/90 relative z-2 mt-[1vh]"
-								alt=""
-							/>
-						</div>
-					</div>
-				))}
+					))}
 			</div>
 			{selectedProject && (
 				<Projectpopup
