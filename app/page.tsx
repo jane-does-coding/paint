@@ -5,8 +5,8 @@ import DashboardPage from "./components/Dashboard/DashboardPage";
 
 export default async function Home() {
 	const currentUser = await getCurrentUser();
-	const projects = await getUserprojects();
-	const challenge = await getActiveChallenge();
+	const projects = (await getUserprojects()) ?? [];
+	const challenge = (await getActiveChallenge()) ?? [];
 
 	if (!currentUser) return;
 

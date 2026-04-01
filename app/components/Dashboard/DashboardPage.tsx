@@ -66,7 +66,10 @@ const DashboardPage = ({
 					{completedDays}/75
 				</p>
 			</div>
-			<div className="bg-blue-300/0 left-[27.5vw] top-[23vh] gap-y-[8vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 grid grid-cols-3 overflow-y-auto h-[77.5vh] pb-[5vh] items-start pt-[8vh] z-11">
+			<div
+				suppressHydrationWarning
+				className="bg-blue-300/0  left-[27.5vw] top-[23vh] gap-y-[8vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 grid grid-cols-3 overflow-y-auto h-[77.5vh] pb-[5vh] items-start pt-[8vh] z-11"
+			>
 				{/* Create new project canvas */}
 				<a
 					href="/create"
