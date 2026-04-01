@@ -8,24 +8,17 @@ interface ProfileProps {
 		name?: string | null;
 		email?: string | null;
 	};
-
 	challenge?: any;
 }
 
 const Profile = ({ currentUser, challenge }: ProfileProps) => {
 	const startChallenge = async () => {
 		try {
-			const response = await fetch("/api/challenge/start", {
-				method: "POST",
-			});
-
-			if (!response.ok) {
-				throw new Error("Failed to start challenge");
-			}
+			const response = await fetch("/api/challenge/start", { method: "POST" });
+			if (!response.ok) throw new Error("Failed to start challenge");
 
 			const data = await response.json();
 			console.log("Challenge started:", data);
-
 			location.reload();
 		} catch (error) {
 			console.error("Error starting challenge:", error);
@@ -48,7 +41,7 @@ const Profile = ({ currentUser, challenge }: ProfileProps) => {
 		?.sort(
 			(a: any, b: any) =>
 				new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime()
-		)[0];
+		)?.[0];
 
 	return (
 		<div>
@@ -88,7 +81,6 @@ const Profile = ({ currentUser, challenge }: ProfileProps) => {
 								{nextProject && (
 									<div className="border-2 border-dashed border-black rounded-[1vh] p-[2vh] bg-amber-100 mt-[2vh] w-full">
 										<p className="finger-paint text-[2vh]">Next Project Due</p>
-
 										<p className="finger-paint text-[3vh] font-bold">
 											{new Date(nextProject.dueDate).toLocaleDateString()}
 										</p>

@@ -56,8 +56,8 @@ const DashboardPage = ({
 			<TopNav pageTitle={"Your Projects"} />
 			<div className="bg-amber-50/50 backdrop-blur-sm h-[3.5vh] left-[30vw] w-[60vw] rounded-full border-3 border-dashed fixed top-[19vh] overflow-hidden">
 				<div
-					className="bg-sky-300 h-full rounded-full transition-all"
-					style={{ width: `${progress + 5}%` }}
+					className="bg-blue-400 h-full rounded-full transition-all"
+					style={{ width: `${progress}%` }}
 				/>
 			</div>
 
@@ -66,7 +66,7 @@ const DashboardPage = ({
 					{completedDays}/75
 				</p>
 			</div>
-			<div className="bg-blue-300/0 left-[27.5vw] top-[23vh] gap-y-[8vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 grid grid-cols-3 overflow-y-auto h-[85vh] pb-[6vh] items-start pt-[8vh] z-11">
+			<div className="bg-blue-300/0 left-[27.5vw] top-[23vh] gap-y-[8vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 grid grid-cols-3 overflow-y-auto h-[77.5vh] pb-[5vh] items-start pt-[8vh] z-11">
 				{/* Create new project canvas */}
 				<a
 					href="/create"
