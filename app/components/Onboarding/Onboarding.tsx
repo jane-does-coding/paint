@@ -41,7 +41,7 @@ const Onboarding = () => {
 	return (
 		<div className="bg-blue-500/0 z-70 backdrop-blur-[2px] w-[70vw] h-[35vh] fixed bottom-[5vh] left-[50%] translate-x-[-50%] drop-shadow-2xl drop-shadow-black">
 			<div
-				className={`bg-[#f0e6da] h-[35vh] w-[70vw] fixed left-[0vw]
+				className={`bg-[#f0e6da] h-[35vh] w-[70vw] fixed left-0
 				rounded-[1vh] shadow-lg shadow-black/50 overflow-hidden px-[3vw] pt-[2vh] border-3 border-dashed border-black pb-[2vh] flex
 				transition-all duration-200 z-19 opacity-100 translate-y-0`}
 			>

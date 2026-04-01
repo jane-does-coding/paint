@@ -4,7 +4,6 @@ import { useState } from "react";
 import TopNav from "../TopNav";
 import Onboarding from "../Onboarding/Onboarding";
 import { Project } from "@prisma/client";
-import Projectpopup from "../Dashboard/Projectpopup";
 import Colorpopup from "../Dashboard/Colorpopup";
 import ExplorePopup from "../Dashboard/ExplorePopup";
 

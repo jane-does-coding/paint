@@ -1,5 +1,4 @@
 "use client";
-
 import TopNav from "@/app/components/TopNav";
 import { useState } from "react";
 
@@ -216,7 +215,7 @@ const CreateProject = () => {
 						<div className="absolute w-full top-[50%] translate-y-[-50%] flex flex-col items-center">
 							<h2 className="mellow text-[4vh] mt-[1vh]">Requirements</h2>
 
-							<div className="flex flex-col gap-[1vh] mt-[0vh]">
+							<div className="flex flex-col gap-[1vh] mt-0">
 								{requirements.map((item, i) => (
 									<p
 										key={i}

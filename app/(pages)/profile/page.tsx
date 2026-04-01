@@ -1,6 +1,5 @@
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import TopNav from "@/app/components/TopNav";
-import React from "react";
 
 const ProfilePage = async () => {
 	const currentUser = await getCurrentUser();
@@ -33,7 +32,7 @@ const ProfilePage = async () => {
 
 			<div className="fixed left-[27.5vw] top-[16vh] w-[72.5vw] px-[2vw] pb-[6vh] pt-[8vh] h-[85vh] overflow-y-auto z-10">
 				<div className="relative w-full max-w-[55vw] mx-auto bg-amber-50 rounded-[1vh] border-3 border-dashed mt-[3vh]">
-					<div className="relative p-[3vh] pt-[0vh] mt-[5vh] rounded-[1vh] shadow-lg shadow-black/50 overflow-hidden">
+					<div className="relative p-[3vh] pt-0 mt-[5vh] rounded-[1vh] shadow-lg shadow-black/50 overflow-hidden">
 						<div className="relative z-10 flex flex-col items-center text-center">
 							<div className="w-[10vh] h-[10vh] rounded-full border-2 border-black overflow-hidden mb-[2vh]">
 								<img
