@@ -55,7 +55,7 @@ const Calendar = ({ challenge }: any) => {
 
 			<TopNav pageTitle={"Calendar"} />
 
-			<div className="bg-amber-50/50 backdrop-blur-sm h-[3.5vh] left-[30vw] w-[60vw] rounded-full border-3 border-dashed fixed top-[19vh]">
+			<div className="bg-amber-50/50 backdrop-blur-sm h-[3.5vh] left-[30vw] w-[60vw] rounded-full border-3 border-dashed fixed top-[19vh] overflow-hidden">
 				<div
 					className="bg-blue-400 h-full rounded-full transition-all"
 					style={{ width: `${progress}%` }}
