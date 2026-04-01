@@ -18,6 +18,8 @@
 
 - /register
 - /projects
+- /challenge/start
+- /challenge/daily-entry
 
 ---
 
@@ -25,7 +27,7 @@
 
 1. Register/Login
 2. Onboarding
-3. Setting up Profile (optional)
+3. Starting the Challenge
 4. Creating Projects & Writing Logs
 
 ---
