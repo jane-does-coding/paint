@@ -6,6 +6,7 @@ import Onboarding from "../Onboarding/Onboarding";
 import { Project } from "@prisma/client";
 import Projectpopup from "../Dashboard/Projectpopup";
 import Colorpopup from "../Dashboard/Colorpopup";
+import ExplorePopup from "../Dashboard/ExplorePopup";
 
 const ExplorePage = ({ projects = [] }: { projects?: Project[] | null }) => {
 	const [selectedProject, setSelectedProject]: any = useState();
@@ -84,7 +85,7 @@ const ExplorePage = ({ projects = [] }: { projects?: Project[] | null }) => {
 					))}
 			</div>
 			{selectedProject && (
-				<Projectpopup
+				<ExplorePopup
 					project={selectedProject}
 					onClose={() => setSelectedProject(null)}
 				/>
