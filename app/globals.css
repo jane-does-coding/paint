@@ -27,3 +27,7 @@ a {
 	box-shadow: none !important;
 	text-shadow: none !important;
 }
+
+button {
+	cursor: pointer;
+}

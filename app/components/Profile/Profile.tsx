@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import TopNav from "@/app/components/TopNav";
 import DailyEntry from "./DailyEntry";
@@ -9,9 +8,11 @@ interface ProfileProps {
 		name?: string | null;
 		email?: string | null;
 	};
+
+	challenge?: any;
 }
 
-const Profile = ({ currentUser }: ProfileProps) => {
+const Profile = ({ currentUser, challenge }: ProfileProps) => {
 	const startChallenge = async () => {
 		try {
 			const response = await fetch("/api/challenge/start", {
@@ -24,30 +25,50 @@ const Profile = ({ currentUser }: ProfileProps) => {
 
 			const data = await response.json();
 			console.log("Challenge started:", data);
+
+			location.reload();
 		} catch (error) {
 			console.error("Error starting challenge:", error);
 		}
 	};
 
+	const projectsCompleted =
+		challenge?.projects?.filter((p: any) => p.submitted).length || 0;
+
+	const totalProjects = challenge?.projects?.length || 0;
+
+	const totalHours =
+		challenge?.dailyEntries?.reduce(
+			(sum: number, entry: any) => sum + entry.hoursCoded,
+			0
+		) || 0;
+
+	const nextProject = challenge?.projects
+		?.filter((p: any) => !p.submitted)
+		?.sort(
+			(a: any, b: any) =>
+				new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime()
+		)[0];
+
 	return (
 		<div>
-			<div className="w-full h-screen bg-green-200">
+			<div className="w-full h-screen">
 				<img
 					src="/imgs/bg-texture.jpg"
 					className="h-screen w-full fixed top-0 left-0"
-					alt="Background texture"
+					alt=""
 				/>
 
 				<img
 					src="/imgs/paint-pallete.jpg"
 					className="h-screen w-[27.5vw] fixed top-0 left-0 z-10"
-					alt="Paint palette"
+					alt=""
 				/>
 
 				<img
 					src="/imgs/raccoons/bird.png"
 					className="w-[10vw] fixed -scale-x-100 bottom-0 right-[2vw] z-20 drop-shadow-xl"
-					alt="Bird character"
+					alt=""
 				/>
 
 				<TopNav pageTitle={"Profile"} />
@@ -56,14 +77,6 @@ const Profile = ({ currentUser }: ProfileProps) => {
 					<div className="relative w-full max-w-[55vw] mx-auto bg-amber-50 rounded-[1vh] border-3 border-dashed mt-[3vh]">
 						<div className="relative p-[3vh] pt-0 mt-[5vh] rounded-[1vh] shadow-lg shadow-black/50 overflow-hidden">
 							<div className="relative z-10 flex flex-col items-center text-center">
-								<div className="w-[10vh] h-[10vh] rounded-full border-2 border-black overflow-hidden mb-[2vh]">
-									<img
-										src={"/imgs/default-avatar.png"}
-										className="w-full h-full object-cover"
-										alt="User avatar"
-									/>
-								</div>
-
 								<h1 className="mellow text-[5vh] leading-[5vh]">
 									{currentUser.name || "Unnamed Artist"}
 								</h1>
@@ -72,26 +85,38 @@ const Profile = ({ currentUser }: ProfileProps) => {
 									{currentUser.email}
 								</p>
 
+								{nextProject && (
+									<div className="border-2 border-dashed border-black rounded-[1vh] p-[2vh] bg-amber-100 mt-[2vh] w-full">
+										<p className="finger-paint text-[2vh]">Next Project Due</p>
+
+										<p className="finger-paint text-[3vh] font-bold">
+											{new Date(nextProject.dueDate).toLocaleDateString()}
+										</p>
+									</div>
+								)}
+
 								<div className="flex gap-[1vw] mt-[3vh] w-full">
-									<div className="border-2 border-black w-1/3 rounded-[1vh] flex flex-col items-center justify-center py-[2vh] bg-amber-50/50 backdrop-blur-xs">
-										<p className="finger-paint text-[3vh] font-extrabold">12</p>
+									<div className="border-2 border-dashed border-black w-1/3 rounded-[1vh] flex flex-col items-center justify-center py-[2vh] bg-amber-50/50 backdrop-blur-xs">
+										<p className="finger-paint text-[3vh] font-extrabold">
+											{projectsCompleted}/{totalProjects}
+										</p>
 										<p className="finger-paint text-[1.75vh] mt-[0.5vh]">
 											Projects
 										</p>
 									</div>
 
-									<div className="border-2 border-black w-1/3 rounded-[1vh] flex flex-col items-center justify-center py-[2vh] bg-amber-50/50 backdrop-blur-xs">
+									<div className="border-2 border-dashed border-black w-1/3 rounded-[1vh] flex flex-col items-center justify-center py-[2vh] bg-amber-50/50 backdrop-blur-xs">
 										<p className="finger-paint text-[3vh] font-extrabold">
-											48h
+											{totalHours}h
 										</p>
 										<p className="finger-paint text-[1.75vh] mt-[0.5vh]">
 											Time Logged
 										</p>
 									</div>
 
-									<div className="border-2 border-black w-1/3 rounded-[1vh] flex flex-col items-center justify-center py-[2vh] bg-amber-50/50 backdrop-blur-xs">
+									<div className="border-2 border-dashed border-black w-1/3 rounded-[1vh] flex flex-col items-center justify-center py-[2vh] bg-amber-50/50 backdrop-blur-xs">
 										<p className="finger-paint text-[3vh] font-extrabold">
-											36h
+											{totalHours}h
 										</p>
 										<p className="finger-paint text-[1.75vh] mt-[0.5vh]">
 											Time Approved
@@ -100,12 +125,14 @@ const Profile = ({ currentUser }: ProfileProps) => {
 								</div>
 
 								<div className="flex gap-[1vw] mt-[3vh] w-full">
-									<button
-										onClick={startChallenge}
-										className="bg-black text-white finger-paint rounded-[1vh] py-[1vh] text-[2vh] w-full"
-									>
-										Start 75 Hard
-									</button>
+									{!challenge && (
+										<button
+											onClick={startChallenge}
+											className="bg-black text-white finger-paint rounded-[1vh] py-[1vh] text-[2vh] w-full"
+										>
+											Start 75 Hard
+										</button>
+									)}
 
 									<button className="bg-black text-white finger-paint rounded-[1vh] py-[1vh] text-[2vh] w-full">
 										Edit Profile
@@ -120,15 +147,17 @@ const Profile = ({ currentUser }: ProfileProps) => {
 
 						<img
 							src="/imgs/bg-texture.jpg"
-							className="absolute top-0 left-0 w-full h-full opacity-30 z-1"
-							alt="Background texture"
+							className="absolute top-0 left-0 w-full h-full opacity-30"
+							alt=""
 						/>
+
 						<img
 							src="/imgs/clip.png"
-							className="w-[12vw] h-[12vh] drop-shadow-sm drop-shadow-black/90 absolute top-[-10vh] left-[50%] translate-x-[-50%] z-10"
-							alt="Clip decoration"
+							className="w-[12vw] h-[12vh] drop-shadow-sm drop-shadow-black/90 absolute top-[-10vh] left-[50%] translate-x-[-50%]"
+							alt=""
 						/>
 					</div>
+
 					<div className="relative w-full max-w-[55vw] mx-auto">
 						<DailyEntry />
 					</div>
