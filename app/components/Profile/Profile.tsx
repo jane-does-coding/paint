@@ -2,6 +2,7 @@
 import React from "react";
 import TopNav from "@/app/components/TopNav";
 import DailyEntry from "./DailyEntry";
+import { signOut } from "next-auth/react";
 
 interface ProfileProps {
 	currentUser: {
@@ -116,9 +117,13 @@ const Profile = ({ currentUser, challenge }: ProfileProps) => {
 									</div>
 								</div>
 
-								<div className="flex gap-[1vw] mt-[3vh] w-full">
+								<div
+									suppressHydrationWarning
+									className="flex gap-[1vw] mt-[3vh] w-full"
+								>
 									{!challenge && (
 										<button
+											suppressHydrationWarning
 											onClick={startChallenge}
 											className="bg-black text-white finger-paint rounded-[1vh] py-[1vh] text-[2vh] w-full"
 										>
@@ -126,12 +131,13 @@ const Profile = ({ currentUser, challenge }: ProfileProps) => {
 										</button>
 									)}
 
-									<button className="bg-black text-white finger-paint rounded-[1vh] py-[1vh] text-[2vh] w-full">
-										Edit Profile
-									</button>
-
-									<button className="bg-black text-white finger-paint rounded-[1vh] py-[1vh] text-[2vh] w-full">
-										Settings
+									{/* Log Out Button */}
+									<button
+										suppressHydrationWarning
+										onClick={() => signOut()}
+										className="bg-black text-white finger-paint rounded-[1vh] py-[1vh] text-[2vh] w-full"
+									>
+										Log Out
 									</button>
 								</div>
 							</div>
