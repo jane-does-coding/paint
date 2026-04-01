@@ -13,26 +13,74 @@ model User {
   username       String
   email          String   @unique
   hashedPassword String
+
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
 
   projects       Project[]
+  challenges     Challenge[]
 }
 
 model Project {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   title       String
   description String
-  image       String   
-  demo        String 
-  github      String  
-  readme      String?  
-  tags        String[] 
-  timeLogged  String   
+  image       String
+  demo        String
+  github      String
+  readme      String?
+  tags        String[]
+  timeLogged  String
 
   userId      String   @db.ObjectId
   user        User     @relation(fields: [userId], references: [id])
 
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+}
+
+model Challenge {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+
+  userId      String   @db.ObjectId
+  user        User     @relation(fields: [userId], references: [id])
+
+  startDate   DateTime
+  endDate     DateTime
+
+  failed      Boolean  @default(false)
+  completed   Boolean  @default(false)
+
+  createdAt   DateTime @default(now())
+
+  dailyEntries DailyEntry[]
+  projects     ChallengeProject[]
+}
+
+model DailyEntry {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+
+  challengeId  String   @db.ObjectId
+  challenge    Challenge @relation(fields: [challengeId], references: [id])
+
+  date         DateTime
+  journal      String
+  hoursCoded   Float
+
+  createdAt    DateTime @default(now())
+}
+
+model ChallengeProject {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+
+  challengeId  String   @db.ObjectId
+  challenge    Challenge @relation(fields: [challengeId], references: [id])
+
+  title        String
+  description  String
+  dueDate      DateTime
+
+  submitted    Boolean  @default(false)
+
+  createdAt    DateTime @default(now())
 }
