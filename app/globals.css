@@ -22,3 +22,8 @@
 .mellow {
 	font-family: "mellow-burgundy", sans-serif;
 }
+
+a {
+	box-shadow: none !important;
+	text-shadow: none !important;
+}

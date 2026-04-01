@@ -1,7 +1,7 @@
 import prisma from "@/app/libs/prismadb";
 import getCurrentUser from "./getCurrentUser";
 
-export default async function getUserprojects() {
+export default async function getProjects() {
 	try {
 		const currentUser = await getCurrentUser();
 
@@ -9,17 +9,13 @@ export default async function getUserprojects() {
 			return null;
 		}
 
-		const userProjects = await prisma.project.findMany({
-			where: {
-				userId: currentUser.id as string,
-			},
-		});
+		const projects = await prisma.project.findMany({});
 
-		if (!userProjects) {
+		if (!projects) {
 			return null;
 		}
 
-		return userProjects;
+		return projects;
 	} catch (err: any) {
 		return null;
 	}

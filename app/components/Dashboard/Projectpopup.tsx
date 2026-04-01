@@ -154,7 +154,7 @@ const Projectpopup = ({ project, onClose, onDelete }: any) => {
 							<button
 								onClick={handleDelete}
 								disabled={isDeleting}
-								className="bg-red-600 text-white finger-paint rounded-[1vh] py-[0.75vh] text-[2vh] w-full flex items-center justify-center"
+								className="bg-black text-white finger-paint rounded-[1vh] py-[0.75vh] text-[2vh] w-full flex items-center justify-center"
 							>
 								{isDeleting ? "Deleting..." : "Delete"}
 							</button>

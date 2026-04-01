@@ -1,22 +1,13 @@
+import getProjects from "@/app/actions/getProjects";
+import ExplorePage from "@/app/components/Explore/ExplorePage";
 import TopNav from "@/app/components/TopNav";
-import React from "react";
 
-const ExplorePage = () => {
+const Explore = async () => {
+	const projects = await getProjects();
 	return (
 		<div>
-			<img
-				src="/imgs/bg-texture.jpg"
-				className="h-screen w-full fixed top-0 left-0"
-				alt=""
-			/>
-
-			<img
-				src="/imgs/paint-pallete.jpg"
-				className="h-screen w-[27.5vw] fixed top-0 left-0 z-10"
-				alt=""
-			/>
-			<TopNav pageTitle={"Explore"} />
-			<div className="bg-blue-300/0 left-[27.5vw] top-[16vh] gap-y-[2vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 flex overflow-y-auto h-[85vh] pb-[6vh] items-start pt-[4vh] z-11 flex-col">
+			<ExplorePage projects={projects} />
+			{/* <div className="bg-blue-300/0 left-[27.5vw] top-[16vh] gap-y-[2vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 flex overflow-y-auto h-[85vh] pb-[6vh] items-start pt-[4vh] z-11 flex-col">
 				<div className="flex flex-col gap-[1.5vh] w-full">
 					{[1, 2, 3, 4, 5, 6, 7, 8].map((person, i) => (
 						<div className="relative w-full drop-shadow-2xl">
@@ -44,9 +35,9 @@ const ExplorePage = () => {
 						</div>
 					))}
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };
 
-export default ExplorePage;
+export default Explore;
