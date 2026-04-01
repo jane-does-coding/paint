@@ -22,12 +22,7 @@ const TopNav = ({ pageTitle }: any) => {
 				>
 					FAQ
 				</a>
-				<a
-					href="/shop"
-					className="border-r-2 border-black border-dashed flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center drop-shadow-none shadow-none py-[1vh] "
-				>
-					Leetcodes
-				</a>
+
 				<a
 					href="/calendar"
 					className="border-r-none border-black border-dashed flex-1 finger-paint text-[3vh] px-0 text-center flex items-center justify-center drop-shadow-none shadow-none py-[1vh] "

@@ -7,10 +7,19 @@ import TopNav from "../TopNav";
 import Onboarding from "../Onboarding/Onboarding";
 import { Project } from "@prisma/client";
 
-const DashboardPage = ({ projects = [] }: { projects?: Project[] | null }) => {
+const DashboardPage = ({
+	projects = [],
+	challenge,
+}: {
+	projects?: Project[] | null;
+	challenge?: any;
+}) => {
 	const [selectedProject, setSelectedProject]: any = useState();
 	const [selectedColorIdea, setSelectedColorIdea]: any = useState();
 	const [isOnborading, setIsOnborading]: any = useState(false);
+
+	const completedDays = challenge?.dailyEntries?.length || 0;
+	const progress = (completedDays / 75) * 100;
 
 	return (
 		<div className="bg-green-200 w-full h-screen">
@@ -45,12 +54,16 @@ const DashboardPage = ({ projects = [] }: { projects?: Project[] | null }) => {
 				))}
 			</div>
 			<TopNav pageTitle={"Your Projects"} />
-			<div className="bg-amber-50/50 backdrop-blur-sm h-[3.5vh] left-[30vw] w-[60vw] rounded-full border-3 border-dashed fixed top-[19vh] box-border">
-				<div className="bg-blue-400 h-full w-[0%] rounded-full"></div>
+			<div className="bg-amber-50/50 backdrop-blur-sm h-[3.5vh] left-[30vw] w-[60vw] rounded-full border-3 border-dashed fixed top-[19vh] overflow-hidden">
+				<div
+					className="bg-sky-300 h-full rounded-full transition-all"
+					style={{ width: `${progress + 5}%` }}
+				/>
 			</div>
-			<div className="h-[3vh] right-[3.5vw] w-[5vw] rounded-full fixed top-[19vh] box-border">
-				<p className="finger-paint text-[3.5vh] leading-[2.25vh] mx-auto text-center font-medium">
-					-/75
+
+			<div className="h-[3vh] right-[3.5vw] w-[5vw] fixed top-[19vh]">
+				<p className="finger-paint text-[3.5vh] leading-[2.25vh] mx-auto text-center">
+					{completedDays}/75
 				</p>
 			</div>
 			<div className="bg-blue-300/0 left-[27.5vw] top-[23vh] gap-y-[8vh] gap-x-[1vw] px-[2vw] w-[72.5vw] fixed right-0 grid grid-cols-3 overflow-y-auto h-[85vh] pb-[6vh] items-start pt-[8vh] z-11">
