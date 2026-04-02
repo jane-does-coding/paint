@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Onboarding = ({ onFinish }: { onFinish: () => void }) => {
+const Onboarding = ({ onFinish }: { onFinish: any }) => {
 	const [currentStep, setCurrentStep] = useState(0);
 
 	const steps = [
