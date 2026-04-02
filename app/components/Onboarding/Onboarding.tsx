@@ -8,7 +8,7 @@ const Onboarding = ({ onFinish }: { onFinish?: any }) => {
 			title: "Meet Floof and Feathers...",
 			description:
 				"The creators of the 75 Hard Challenge for Programmers, who will guide you through this journey.",
-			image: "/imgs/raccoons/raccoon-bird-side.png",
+			image: "/imgs/raccoons/raccoon-bird-lay.png",
 		},
 		{
 			title: "Code Every Day",
