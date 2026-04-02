@@ -1,6 +1,7 @@
 "use client";
 import TopNav from "@/app/components/TopNav";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const CreateProject = () => {
 	const [form, setForm] = useState({
@@ -27,6 +28,10 @@ const CreateProject = () => {
 		{ label: "Tags", valid: form.tags.length > 0 },
 	];
 
+	const canSubmit = requirements.every((r) => r.valid);
+
+	const router = useRouter();
+
 	const handleSubmit = async () => {
 		await fetch("/api/projects", {
 			method: "POST",
@@ -35,6 +40,7 @@ const CreateProject = () => {
 				tags: form.tags.split(",").map((t) => t.trim()),
 			}),
 		});
+		router.push("/");
 	};
 
 	return (
@@ -197,6 +203,7 @@ const CreateProject = () => {
 
 					<button
 						onClick={handleSubmit}
+						disabled={!canSubmit}
 						className="hover:bg-white bg-neutral-900 transition-all rounded-[1vh] ease-in-out duration-300 hover:text-black text-white border-2 border-dashed hover:border-black border-neutral-300 w-[96%] mx-auto cursor-pointer mt-[1vh] text-[2.75vh] mellow font-extralight py-[1.25vh] pb-[0.75vh] disabled:opacity-50 disabled:cursor-not-allowed"
 					>
 						Create Project
