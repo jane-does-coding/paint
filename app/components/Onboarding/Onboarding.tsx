@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Onboarding = () => {
+const Onboarding = ({ onFinish }: { onFinish: () => void }) => {
 	const [currentStep, setCurrentStep] = useState(0);
 
 	const steps = [
@@ -13,19 +13,19 @@ const Onboarding = () => {
 		{
 			title: "Code Every Day",
 			description:
-				"You must code for at least 2+ hours every single day. This is deep work only — no distractions, no excuses.",
+				"You must code for at least 2+ hours every single day. And enter a journal entry on what you did for proof",
 			image: "/imgs/raccoons/raccoon-bird-stand-side.png",
 		},
 		{
 			title: "Ship Projects",
 			description:
-				"Every 15 days, you must complete and submit a project. No unfinished ideas — you ship or you restart.",
+				"Every 15 days, you must complete and submit a project. No unfinished ideas - you ship or you restart.",
 			image: "/imgs/raccoons/raccoon-bird-react.png",
 		},
 		{
 			title: "Sharpen Your Mind",
 			description:
-				"Solve LeetCode problems every day (except weekends). Train your problem-solving like a weapon.",
+				"Good luck on your journey, and remember - it's not just about coding, it's about building discipline and resilience.",
 			image: "/imgs/raccoons/raccoon-bird-think.png",
 		},
 	];
@@ -33,6 +33,8 @@ const Onboarding = () => {
 	const handleNext = () => {
 		if (currentStep < steps.length - 1) {
 			setCurrentStep(currentStep + 1);
+		} else {
+			onFinish();
 		}
 	};
 

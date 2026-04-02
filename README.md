@@ -14,6 +14,12 @@
 
 ---
 
+### Todo:
+
+- Onboarding
+- Login Redirect
+- Project creation
+
 ### Routes:
 
 - /register

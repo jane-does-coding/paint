@@ -1,7 +1,7 @@
 "use client";
 import Projectpopup from "./Projectpopup";
 import ideas from "@/app/data/ideas.json";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Colorpopup from "./Colorpopup";
 import TopNav from "../TopNav";
 import Onboarding from "../Onboarding/Onboarding";
@@ -16,7 +16,19 @@ const DashboardPage = ({
 }) => {
 	const [selectedProject, setSelectedProject]: any = useState();
 	const [selectedColorIdea, setSelectedColorIdea]: any = useState();
-	const [isOnborading, setIsOnborading]: any = useState(false);
+	const [isOnboarding, setIsOnboarding]: any = useState(false);
+
+	useEffect(() => {
+		const hasSeenOnboarding = localStorage.getItem("hasSeenOnboarding");
+		if (!hasSeenOnboarding) {
+			setIsOnboarding(true);
+		}
+	}, []);
+
+	const handleOnboardingFinish = () => {
+		localStorage.setItem("hasSeenOnboarding", "true");
+		setIsOnboarding(false);
+	};
 
 	const completedDays = challenge?.dailyEntries?.length || 0;
 	const progress = (completedDays / 75) * 100;
@@ -34,8 +46,8 @@ const DashboardPage = ({
 				alt=""
 			/>
 
-			{isOnborading ? (
-				<Onboarding />
+			{isOnboarding ? (
+				<Onboarding onFinish={handleOnboardingFinish} />
 			) : (
 				<img
 					src="/imgs/raccoons/raccoon-bird-front.png"
