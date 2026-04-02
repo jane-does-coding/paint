@@ -6,7 +6,6 @@ import Colorpopup from "./Colorpopup";
 import TopNav from "../TopNav";
 import Onboarding from "../Onboarding/Onboarding";
 import { Project } from "@prisma/client";
-
 const DashboardPage = ({
 	projects = [],
 	challenge,
@@ -56,6 +55,7 @@ const DashboardPage = ({
 				/>
 			)}
 
+			{/* Rest of your component remains the same */}
 			<div className="fixed top-0 w-[27.5vw] h-screen z-10 text-center items-center justify-center grid grid-cols-4 left-0 gap-[0.5vh] p-[1vh]">
 				{ideas.slice(0, 24).map((idea, i) => (
 					<div
