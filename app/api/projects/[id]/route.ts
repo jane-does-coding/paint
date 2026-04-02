@@ -8,7 +8,6 @@ export async function DELETE(
 ) {
 	try {
 		const { id } = await params;
-
 		if (!id) {
 			return NextResponse.json(
 				{ error: "Project ID is required" },
